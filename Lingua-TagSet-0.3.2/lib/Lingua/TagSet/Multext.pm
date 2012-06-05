@@ -93,11 +93,11 @@ our @id_maps = (
         tokens   => [ 'S', 'p' ]
     },
     {
-        features => { cat => 'cc' },
+        features => { cat => 'conj', type => 'co' },
         tokens   => [ 'C', 'c' ]
     },
     { 
-        features => { cat => 'cs' },
+        features => { cat => 'conj', type => 'sub' },
         tokens   => [ 'C', 's' ]
     },
     { 
@@ -105,7 +105,7 @@ our @id_maps = (
         tokens   => [ 'I' ],
     },
     {
-        features => { cat => 'ponct' },
+        features => { cat => 'punct' },
         tokens   => [ 'F' ],
     },
 );

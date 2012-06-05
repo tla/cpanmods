@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # $Id: treetagger.t,v 1.2 2005/03/23 10:30:49 rousse Exp $
 
-use Lingua::TagSet::TreeTagger;
+use Lingua::TagSet::TreeTagger::French;
 use Test::More;
 use strict;
 
@@ -17,11 +17,11 @@ plan tests => @tags2strings + @strings2tags;
 foreach my $test (@tags2strings ) {
     chomp $test;
     my ($tag, $string) = split(/\t/, $test);
-    is(Lingua::TagSet::TreeTagger->tag2string($tag), $string, "$tag conversion"); 
+    is(Lingua::TagSet::TreeTagger::French->tag2string($tag), $string, "$tag conversion"); 
 }
 
 foreach my $test (@strings2tags) {
     chomp $test;
     my ($string, $tag) = split(/\t/, $test);
-    is(Lingua::TagSet::TreeTagger->string2tag($string), $tag, "$string conversion"); 
+    is(Lingua::TagSet::TreeTagger::French->string2tag($string), $tag, "$string conversion"); 
 }

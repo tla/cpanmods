@@ -18,8 +18,8 @@ As-fp-	cat@adj type@poss gender@fem num@pl
 As-fs-	cat@adj type@poss gender@fem num@sing
 As-mp-	cat@adj type@poss gender@masc num@pl
 As-ms-	cat@adj type@poss gender@masc num@sing
-Cc	cat@cc
-Cs	cat@cs
+Cc	cat@conj type@co
+Cs	cat@conj type@sub
 Da-fp--d-	cat@det type@art gender@fem num@pl def@def
 Da-fp--da	cat@det type@art gender@fem num@pl def@def
 Da-fp--dd	cat@det type@art gender@fem num@pl def@def

@@ -18,7 +18,7 @@ ADJ:_:s	cat@adj num@sing
 ADJ:XXX	cat@adj
 ADV	cat@adv|advneg
 CAR	cat@adj|det|noun
-COO	cat@cc
+COO	cat@conj type@co
 DTC:m:s	cat@det gender@masc num@sing
 DTC:_:p	cat@det num@pl
 DTN:f:p	cat@det gender@fem num@pl
@@ -60,7 +60,7 @@ SBC:m:s	cat@noun type@common gender@masc num@sing
 SBC:_:p	cat@noun type@common num@pl
 SBC:_:s	cat@noun type@common num@sing
 SBP	cat@noun type@proper
-SUB	cat@cs
+SUB	cat@conj type@sub
 SYM	cat@x
 VCJ:{{1|3}p:s:pst:{ind|subj}|2p:s:pst:imper}	cat@verb mode@ind|subj tense@pres num@sing
 VCJ:1p:p:pst:{ind|imper}	cat@verb mode@imp|ind tense@pres pers@1 num@pl

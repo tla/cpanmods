@@ -38,11 +38,11 @@ our @id_maps = (
         tokens   => [ 'N' ],
     },
     {
-        features => { cat => 'cc' },
+        features => { cat => 'conj', type => 'co' },
         tokens   => [ 'C' ],
     },
     {
-        features => { cat => 'cs' },
+        features => { cat => 'conj', type => 'sub' },
         tokens   => [ 'CSUB' ],
     },
     {
@@ -54,7 +54,7 @@ our @id_maps = (
         tokens   => [ 'PRON' ],
     },
     {
-        features => { cat => 'ponct' },
+        features => { cat => 'punct' },
         tokens   => [ 'PUNC' ],
     },
     {

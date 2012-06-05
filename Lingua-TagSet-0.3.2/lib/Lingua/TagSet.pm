@@ -7,7 +7,7 @@ Lingua::TagSet - Natural language tagset conversion
 
 =head1 VERSION
 
-Version 0.3.2
+Version 0.3.3
 
 =head1 DESCRIPTION
 
@@ -34,7 +34,7 @@ use Lingua::TagSet::Tag;
 use strict;
 use warnings;
 
-our $VERSION = '0.3.2';
+our $VERSION = '0.3.3';
 
 my (%tag2string, %string2tag);
 memoize 'tag2string', SCALAR_CACHE => [ HASH => \%tag2string ];

@@ -19,13 +19,13 @@ cat@adj type@qual num@pl gender@masc	A-qual-mp
 cat@adj type@qual num@sing gender@fem	A-qual-fs
 cat@adj type@qual num@sing gender@masc	A-qual-ms
 cat@adv	ADV--
-cat@cc	C-C-
-cat@cs	C-S-
+cat@conj type@co	C-C-
+cat@conj type@sub	C-S-
 cat@det num@pl gender@fem	D--fp
 cat@det num@pl gender@masc	D--mp
 cat@det num@sing gender@fem	D--fs
 cat@det num@sing gender@masc	D--ms
-cat@ponct	PONCT--
+cat@punct	PONCT--
 cat@pron	PRO--
 cat@pron num@pl gender@masc	PRO--mp
 cat@pron num@sing gender@masc	PRO--ms

@@ -1,4 +1,3 @@
-.#MANIFEST.1.1
 ChangeLog
 lib/Lingua/TagSet.pm
 lib/Lingua/TagSet/Acabit.pm
@@ -6,7 +5,9 @@ lib/Lingua/TagSet/Fastr.pm
 lib/Lingua/TagSet/Multext.pm
 lib/Lingua/TagSet/Tag.pm
 lib/Lingua/TagSet/Talana.pm
-lib/Lingua/TagSet/TreeTagger.pm
+lib/Lingua/TagSet/TreeTagger/English.pm
+lib/Lingua/TagSet/TreeTagger/French.pm
+lib/Lingua/TagSet/TreeTagger/Latin.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml

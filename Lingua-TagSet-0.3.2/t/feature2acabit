@@ -9,8 +9,8 @@ cat@adj gender@masc num@sing	ADJ:m:s
 cat@adj num@pl	ADJ:_:p
 cat@adj num@sing	ADJ:_:s
 cat@adv	ADV
-cat@cc	COO
-cat@cs	SUB
+cat@conj type@co	COO
+cat@conj type@sub	SUB
 cat@det gender@fem num@pl	{DTC|DTN}:f:p
 cat@det gender@fem num@sing	{DTC|DTN}:f:s
 cat@det gender@masc num@pl	{DTC|DTN}:m:p

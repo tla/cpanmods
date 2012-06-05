@@ -21,8 +21,8 @@ A-qual-ms	cat@adj type@qual gender@masc num@sing
 ADV--	cat@adv
 ADV-excl-	cat@adv
 ADV-int-	cat@adv
-C-C-	cat@cc
-C-S-	cat@cs
+C-C-	cat@conj type@co
+C-S-	cat@conj type@sub
 CL--3fp	cat@pron type@cli pers@3 gender@fem num@pl
 CL--3ms	cat@pron type@cli pers@3 gender@masc num@sing
 CL-obj-1fp	cat@pron type@cli pers@1 gender@fem num@pl case@acc|dat|gen|obl
@@ -137,8 +137,8 @@ P+PRO-int-3ms
 P+PRO-rel-3fp	
 P+PRO-rel-3mp	
 P+PRO-rel-3ms	
-PONCT-S-	cat@ponct
-PONCT-W-	cat@ponct
+PONCT-S-	cat@punct
+PONCT-W-	cat@punct
 PREF	cat@pref
 PREF--	cat@pref
 PRO--1fp	cat@pron pers@1 gender@fem num@pl

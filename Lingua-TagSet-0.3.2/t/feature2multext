@@ -20,8 +20,8 @@ type@qual cat@adj num@sing degree@pos gender@fem	Afpfs-
 type@qual cat@adj num@sing degree@pos gender@masc	Afpms-
 cat@adv	R
 cat@advneg	R-[dn]
-cat@cc	Cc
-cat@cs	Cs
+cat@conj type@co	Cc
+cat@conj type@sub	Cs
 cat@adj|det num@pl	[AD]
 cat@adj|det num@pl gender@fem	[AD]
 cat@adj|det num@pl gender@masc	[AD]

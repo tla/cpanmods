@@ -4,7 +4,7 @@ ADV	cat@adv
 DET:ART	cat@det
 DET:POS	cat@det type@poss
 INT	cat@interj
-KON	cat@cc|cs
+KON	cat@conj
 NAM	cat@noun type@proper
 NOM	cat@noun type@common
 NUM	cat@adj|det|noun
@@ -16,8 +16,8 @@ PRO:POS	cat@pron type@poss
 PRO:REL	cat@pron type@rel
 PRP	cat@prep
 PRP:det	cat@prep
-PUN	cat@ponct
-PUN:cit	cat@ponct
+PUN	cat@punct
+PUN:cit	cat@punct
 SENT	cat@pp
 SYM	cat@x
 VER:cond	cat@verb mode@cond tense@pres

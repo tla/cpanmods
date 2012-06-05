@@ -28,7 +28,7 @@ our @id_maps = (
         tokens   => [ 'CAR' ],
     },
     {
-        features => { cat => 'cc' },
+        features => { cat => 'conj', type => 'co' },
         tokens   => [ 'COO' ],
     },
     {
@@ -44,7 +44,7 @@ our @id_maps = (
         tokens   => [ 'INJ' ],
     },
     {
-        features => { cat => 'ponct' },
+        features => { cat => 'punct' },
         tokens   => [ [ '?', '!', '.', ';', ':' ] ],
     },
     {
@@ -80,7 +80,7 @@ our @id_maps = (
         ]
     },
     {
-        features => { cat => 'cs' },
+        features => { cat => 'conj', type => 'sub' },
         tokens   => [ 'SUB' ],
     },
     {

@@ -1,9 +1,9 @@
 # $Id: TreeTagger.pm,v 1.6 2006/08/22 14:21:55 rousse Exp $
-package Lingua::TagSet::TreeTagger;
+package Lingua::TagSet::TreeTagger::French;
 
 =head1 NAME
 
-Lingua::TagSet::TreeTagger - TreeTagger tagset for Lingua::TagSet
+Lingua::TagSet::TreeTagger::French - TreeTagger tagset for Lingua::TagSet
 
 =cut
 
@@ -36,7 +36,7 @@ our @id_maps = (
         tokens   => [ 'INT' ],
     },
     {
-        features => { cat => [ 'cc', 'cs' ] },
+        features => { cat => [ 'conj' ] },
         tokens   => [ 'KON' ],
     },
     {
@@ -59,7 +59,7 @@ our @id_maps = (
         ]
     },
     {
-        features => { cat => 'ponct' },
+        features => { cat => 'punct' },
         tokens   => [ 'PUN' ],
     },
     {

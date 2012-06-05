@@ -1,14 +1,14 @@
 cat@abr	ABR
 cat@adj	ADJ
 cat@adv	ADV
-cat@cc|cs	KON
+cat@conj	KON
 cat@det	DET:ART
 cat@det type@poss	DET:POS
 cat@interj	INT
 cat@adj|det|noun	ADJ|DET:ART
 cat@noun type@common	NOM
 cat@noun type@proper	NAM
-cat@ponct	PUN
+cat@punct	PUN
 cat@prep	PRP
 cat@pron	PRO:
 cat@pron type@dem	PRO:DEM
