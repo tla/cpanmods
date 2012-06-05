@@ -1,0 +1,14 @@
+ChangeLog
+lib/Lingua/Features.pm
+lib/Lingua/Features/FeatureType.pm
+lib/Lingua/Features/Structure.pm
+lib/Lingua/Features/StructureType.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+strings
+t/base.t
+t/strings.t
+t/normalization.t
+t/comparison.t

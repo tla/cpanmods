@@ -1,0 +1,26 @@
+2006-09-21 0.3.2
+
+	* remove uncomplete Lingua::TagSet::Frmg from distribution
+
+2006-08-22 0.3.1
+
+	* make ExtUtils::MakeMaker::Coverage use conditional
+
+2004-11-06 0.3
+	
+	* updated for new Lingua::Features
+	* Acabit tagset
+	* exhaustive research of matching mappings
+
+2004-19-04 0.2
+
+	* fixed namespace in POD
+	* fixed dates in ChangeLog
+	* TreeTagger tagset
+	* better selection algorithm for multiple maps
+	* normalize talana tags length before conversion
+	* additional talana maps
+
+2004-13-04 0.1
+
+	* first release

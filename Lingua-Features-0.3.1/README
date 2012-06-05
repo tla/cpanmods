@@ -1,0 +1,53 @@
+Lingua::Features
+================
+
+NAME
+
+    Lingua::Features
+
+DESCRIPTION
+
+    This module implements natural languages features in Perl. Its brings the
+    following advantages:
+    - type verification
+    - features and values normalization
+    - smart comparisons between structures
+
+
+HOW DO I INSTALL IT?
+
+    To install this module type the following:
+
+    tar xvzf Lingua::Features-X.XX.tar.gz
+    cd Lingua::Features-X.XX
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+    Where X.XX is the version number of the module which you are installing.
+
+WHERE IS THE DOCUMENTATION?
+
+    All of the documentation is currently in POD format in the Features.pm
+    file. If you install the module using the standard method you should  be
+    able to read it by typing
+
+    perldoc Lingua::Features
+
+    at a comand prompt.
+
+LATEST VERSION
+
+    The latest version of this module will always be available from CPAN.
+
+COPYRIGHT AND LICENSE
+
+    Copyright (C) 2004-2006, INRIA.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+AUTHOR
+
+    Guillaume Rousse <grousse@cpan.org>

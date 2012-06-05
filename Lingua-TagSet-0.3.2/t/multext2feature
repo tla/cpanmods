@@ -1,0 +1,380 @@
+Afcfp-	cat@adj type@qual degree@comp gender@fem num@pl
+Afcfs-	cat@adj type@qual degree@comp gender@fem num@sing
+Afcmp-	cat@adj type@qual degree@comp gender@masc num@pl
+Afcms-	cat@adj type@qual degree@comp gender@masc num@sing
+Afpfp-	cat@adj type@qual degree@pos gender@fem num@pl
+Afpfs-	cat@adj type@qual degree@pos gender@fem num@sing
+Afpmp-	cat@adj type@qual degree@pos gender@masc num@pl
+Afpms-	cat@adj type@qual degree@pos gender@masc num@sing
+Ai-fp-	cat@adj type@ind gender@fem num@pl
+Ai-fs-	cat@adj type@ind gender@fem num@sing
+Ai-mp-	cat@adj type@ind gender@masc num@pl
+Ai-ms-	cat@adj type@ind gender@masc num@sing
+Ao-fp-	cat@adj type@ord gender@fem num@pl
+Ao-fs-	cat@adj type@ord gender@fem num@sing
+Ao-mp-	cat@adj type@ord gender@masc num@pl
+Ao-ms-	cat@adj type@ord gender@masc num@sing
+As-fp-	cat@adj type@poss gender@fem num@pl
+As-fs-	cat@adj type@poss gender@fem num@sing
+As-mp-	cat@adj type@poss gender@masc num@pl
+As-ms-	cat@adj type@poss gender@masc num@sing
+Cc	cat@cc
+Cs	cat@cs
+Da-fp--d-	cat@det type@art gender@fem num@pl def@def
+Da-fp--da	cat@det type@art gender@fem num@pl def@def
+Da-fp--dd	cat@det type@art gender@fem num@pl def@def
+Da-fp--id	cat@det type@art gender@fem num@pl def@ind
+Da-fs--d-	cat@det type@art gender@fem num@sing def@def
+Da-fs--i-	cat@det type@art gender@fem num@sing def@ind
+Da-mp--d-	cat@det type@art gender@masc num@pl def@def
+Da-mp--da	cat@det type@art gender@masc num@pl def@def
+Da-mp--dd	cat@det type@art gender@masc num@pl def@def
+Da-mp--id	cat@det type@art gender@masc num@pl def@ind
+Da-ms--d-	cat@det type@art gender@masc num@sing def@def
+Da-ms--da	cat@det type@art gender@masc num@sing def@def
+Da-ms--dd	cat@det type@art gender@masc num@sing def@def
+Da-ms--i-	cat@det type@art gender@masc num@sing def@ind
+Dd-fp----	cat@det type@dem gender@fem num@pl
+Dd-fs----	cat@det type@dem gender@fem num@sing
+Dd-mp----	cat@det type@dem gender@masc num@pl
+Dd-ms----	cat@det type@dem gender@masc num@sing
+Di-fp----	cat@det type@ind gender@fem num@pl
+Di-fs----	cat@det type@ind gender@fem num@sing
+Di-mp----	cat@det type@ind gender@masc num@pl
+Di-ms----	cat@det type@ind gender@masc num@sing
+Ds1fp-p--	cat@det type@poss pers@1 gender@fem num@pl numposs@pl
+Ds1fp-s--	cat@det type@poss pers@1 gender@fem num@pl numposs@sing
+Ds1fs-p--	cat@det type@poss pers@1 gender@fem num@sing numposs@pl
+Ds1fs-s--	cat@det type@poss pers@1 gender@fem num@sing numposs@sing
+Ds1mp-p--	cat@det type@poss pers@1 gender@masc num@pl numposs@pl
+Ds1mp-s--	cat@det type@poss pers@1 gender@masc num@pl numposs@sing
+Ds1ms-p--	cat@det type@poss pers@1 gender@masc num@sing numposs@pl
+Ds1ms-s--	cat@det type@poss pers@1 gender@masc num@sing numposs@sing
+Ds2fp-p--	cat@det type@poss pers@2 gender@fem num@pl numposs@pl
+Ds2fp-s--	cat@det type@poss pers@2 gender@fem num@pl numposs@sing
+Ds2fs-p--	cat@det type@poss pers@2 gender@fem num@sing numposs@pl
+Ds2fs-s--	cat@det type@poss pers@2 gender@fem num@sing numposs@sing
+Ds2mp-p--	cat@det type@poss pers@2 gender@masc num@pl numposs@pl
+Ds2mp-s--	cat@det type@poss pers@2 gender@masc num@pl numposs@sing
+Ds2ms-p--	cat@det type@poss pers@2 gender@masc num@sing numposs@pl
+Ds2ms-s--	cat@det type@poss pers@2 gender@masc num@sing numposs@sing
+Ds3fp-p--	cat@det type@poss pers@3 gender@fem num@pl numposs@pl
+Ds3fp-s--	cat@det type@poss pers@3 gender@fem num@pl numposs@sing
+Ds3fs-p--	cat@det type@poss pers@3 gender@fem num@sing numposs@pl
+Ds3fs-s--	cat@det type@poss pers@3 gender@fem num@sing numposs@sing
+Ds3mp-p--	cat@det type@poss pers@3 gender@masc num@pl numposs@pl
+Ds3mp-s--	cat@det type@poss pers@3 gender@masc num@pl numposs@sing
+Ds3ms-p--	cat@det type@poss pers@3 gender@masc num@sing numposs@pl
+Ds3ms-s--	cat@det type@poss pers@3 gender@masc num@sing numposs@sing
+Dt-fp----	cat@det type@excl|int gender@fem num@pl
+Dt-fs----	cat@det type@excl|int gender@fem num@sing
+Dt-mp----	cat@det type@excl|int gender@masc num@pl
+Dt-ms----	cat@det type@excl|int gender@masc num@sing
+I	cat@interj
+Mcfp-	cat@adj|det|pron gender@fem num@pl
+Mcfs-	cat@adj|det|pron gender@fem num@sing
+Mcmp-	cat@adj|det|pron gender@masc num@pl
+Mcms-	cat@adj|det|pron gender@masc num@sing
+Mc-p-	cat@adj|det|pron num@pl
+Mc-s-	cat@adj|det|pron num@sing
+Ncfp--	cat@noun type@common gender@fem num@pl
+Ncfs--	cat@noun type@common gender@fem num@sing
+Ncmp--	cat@noun type@common gender@masc num@pl
+Ncms--	cat@noun type@common gender@masc num@sing
+Ndfp--	cat@noun type@dist gender@fem num@pl
+Ndfp-c	cat@noun type@dist gender@fem num@pl sem@pl
+Ndfp-h	cat@noun type@dist gender@fem num@pl sem@inh
+Ndfp-s	cat@noun type@dist gender@fem num@pl sem@ent
+Ndfs--	cat@noun type@dist gender@fem num@sing
+Ndfs-c	cat@noun type@dist gender@fem num@sing sem@pl
+Ndfs-h	cat@noun type@dist gender@fem num@sing sem@inh
+Ndfs-s	cat@noun type@dist gender@fem num@sing sem@ent
+Ndmp--	cat@noun type@dist gender@masc num@pl
+Ndmp-c	cat@noun type@dist gender@masc num@pl sem@pl
+Ndmp-h	cat@noun type@dist gender@masc num@pl sem@inh
+Ndmp-s	cat@noun type@dist gender@masc num@pl sem@ent
+Ndms--	cat@noun type@dist gender@masc num@sing
+Ndms-c	cat@noun type@dist gender@masc num@sing sem@pl
+Ndms-h	cat@noun type@dist gender@masc num@sing sem@inh
+Ndms-s	cat@noun type@dist gender@masc num@sing sem@ent
+Npfs--	cat@noun type@proper gender@fem num@sing
+Npfs-c	cat@noun type@proper gender@fem num@sing sem@pl
+Npms--	cat@noun type@proper gender@masc num@sing
+Npms-c	cat@noun type@proper gender@masc num@sing sem@pl
+Pd-fp--	cat@pron type@dem gender@fem num@pl
+Pd-fs--	cat@pron type@dem gender@fem num@sing
+Pd-m---	cat@pron type@dem gender@masc
+Pd-mp--	cat@pron type@dem gender@masc num@pl
+Pd-ms--	cat@pron type@dem gender@masc num@sing
+Pi-fp--	cat@pron type@ind gender@fem num@pl
+Pi-fs--	cat@pron type@ind gender@fem num@sing
+Pi-mp--	cat@pron type@ind gender@masc num@pl
+Pi-ms--	cat@pron type@ind gender@masc num@sing
+Pp1fsj-	cat@pron type@pers pers@1 gender@fem num@sing case@acc|dat
+Pp1msj-	cat@pron type@pers pers@1 gender@masc num@sing case@acc|dat
+Pp1-pj-	cat@pron type@pers pers@1 num@pl case@acc|dat
+Pp1-pn-	cat@pron type@pers pers@1 num@pl case@nom
+Pp1-po-	cat@pron type@pers pers@1 num@pl case@obl
+Pp1-sn-	cat@pron type@pers pers@1 num@sing case@nom
+Pp1-so-	cat@pron type@pers pers@1 num@sing case@obl
+Pp2fpj-	cat@pron type@pers pers@2 gender@fem num@pl case@acc|dat
+Pp2fsj-	cat@pron type@pers pers@2 gender@fem num@sing case@acc|dat
+Pp2mpj-	cat@pron type@pers pers@2 gender@masc num@pl case@acc|dat
+Pp2msj-	cat@pron type@pers pers@2 gender@masc num@sing case@acc|dat
+Pp2-pn-	cat@pron type@pers pers@2 num@pl case@nom
+Pp2-po-	cat@pron type@pers pers@2 num@pl case@obl
+Pp2-sn-	cat@pron type@pers pers@2 num@sing case@nom
+Pp2-so-	cat@pron type@pers pers@2 num@sing case@obl
+Pp3fpj-	cat@pron type@pers pers@3 gender@fem num@pl case@acc|dat
+Pp3fpn-	cat@pron type@pers pers@3 gender@fem num@pl case@nom
+Pp3fpo-	cat@pron type@pers pers@3 gender@fem num@pl case@obl
+Pp3fsj-	cat@pron type@pers pers@3 gender@fem num@sing case@acc|dat
+Pp3fsn-	cat@pron type@pers pers@3 gender@fem num@sing case@nom
+Pp3fso-	cat@pron type@pers pers@3 gender@fem num@sing case@obl
+Pp3m-j-	cat@pron type@pers pers@3 gender@masc case@acc|dat
+Pp3m-n-	cat@pron type@pers pers@3 gender@masc case@nom
+Pp3mpj-	cat@pron type@pers pers@3 gender@masc num@pl case@acc|dat
+Pp3mpn-	cat@pron type@pers pers@3 gender@masc num@pl case@nom
+Pp3mpo-	cat@pron type@pers pers@3 gender@masc num@pl case@obl
+Pp3msj-	cat@pron type@pers pers@3 gender@masc num@sing case@acc|dat
+Pp3msn-	cat@pron type@pers pers@3 gender@masc num@sing case@nom
+Pp3mso-	cat@pron type@pers pers@3 gender@masc num@sing case@obl
+Pr-----	cat@pron type@rel
+Pr-fp--	cat@pron type@rel gender@fem num@pl
+Pr-fs--	cat@pron type@rel gender@fem num@sing
+Pr-mp--	cat@pron type@rel gender@masc num@pl
+Pr-ms--	cat@pron type@rel gender@masc num@sing
+Ps1fp-p	cat@pron type@poss pers@1 gender@fem num@pl numposs@pl
+Ps1fp-s	cat@pron type@poss pers@1 gender@fem num@pl numposs@sing
+Ps1fs-p	cat@pron type@poss pers@1 gender@fem num@sing numposs@pl
+Ps1fs-s	cat@pron type@poss pers@1 gender@fem num@sing numposs@sing
+Ps1mp-p	cat@pron type@poss pers@1 gender@masc num@pl numposs@pl
+Ps1mp-s	cat@pron type@poss pers@1 gender@masc num@pl numposs@sing
+Ps1ms-p	cat@pron type@poss pers@1 gender@masc num@sing numposs@pl
+Ps1ms-s	cat@pron type@poss pers@1 gender@masc num@sing numposs@sing
+Ps2fp-p	cat@pron type@poss pers@2 gender@fem num@pl numposs@pl
+Ps2fp-s	cat@pron type@poss pers@2 gender@fem num@pl numposs@sing
+Ps2fs-p	cat@pron type@poss pers@2 gender@fem num@sing numposs@pl
+Ps2fs-s	cat@pron type@poss pers@2 gender@fem num@sing numposs@sing
+Ps2mp-p	cat@pron type@poss pers@2 gender@masc num@pl numposs@pl
+Ps2mp-s	cat@pron type@poss pers@2 gender@masc num@pl numposs@sing
+Ps2ms-p	cat@pron type@poss pers@2 gender@masc num@sing numposs@pl
+Ps2ms-s	cat@pron type@poss pers@2 gender@masc num@sing numposs@sing
+Ps3fp-p	cat@pron type@poss pers@3 gender@fem num@pl numposs@pl
+Ps3fp-s	cat@pron type@poss pers@3 gender@fem num@pl numposs@sing
+Ps3fs-p	cat@pron type@poss pers@3 gender@fem num@sing numposs@pl
+Ps3fs-s	cat@pron type@poss pers@3 gender@fem num@sing numposs@sing
+Ps3mp-p	cat@pron type@poss pers@3 gender@masc num@pl numposs@pl
+Ps3mp-s	cat@pron type@poss pers@3 gender@masc num@pl numposs@sing
+Ps3ms-p	cat@pron type@poss pers@3 gender@masc num@sing numposs@pl
+Ps3ms-s	cat@pron type@poss pers@3 gender@masc num@sing numposs@sing
+Pt-----	cat@pron type@int
+Pt-fp--	cat@pron type@int gender@fem num@pl
+Pt-fs--	cat@pron type@int gender@fem num@sing
+Pt-mp--	cat@pron type@int gender@masc num@pl
+Pt-ms--	cat@pron type@int gender@masc num@sing
+Px1fp--	cat@pron type@cli pers@1 gender@fem num@pl
+Px1fs--	cat@pron type@cli pers@1 gender@fem num@sing
+Px1mp--	cat@pron type@cli pers@1 gender@masc num@pl
+Px1ms--	cat@pron type@cli pers@1 gender@masc num@sing
+Px2fp--	cat@pron type@cli pers@2 gender@fem num@pl
+Px2fs--	cat@pron type@cli pers@2 gender@fem num@sing
+Px2mp--	cat@pron type@cli pers@2 gender@masc num@pl
+Px2ms--	cat@pron type@cli pers@2 gender@masc num@sing
+Px3fp--	cat@pron type@cli pers@3 gender@fem num@pl
+Px3fs--	cat@pron type@cli pers@3 gender@fem num@sing
+Px3mp--	cat@pron type@cli pers@3 gender@masc num@pl
+Px3ms--	cat@pron type@cli pers@3 gender@masc num@sing
+Rgc	cat@adv
+Rgd	cat@advneg
+Rgp	cat@adv
+Rpd	cat@advneg
+Rpn	cat@advneg
+Sp-	cat@prep
+Spa	cat@prep
+Spa+Afpfp-	cat@prep
+Spa+Afpfs-	cat@prep
+Spa+Afpmp-	cat@prep
+Spa+Afpms-	cat@prep
+Spa+Pr-fp--	cat@prep
+Spa+Pr-fs--	cat@prep
+Spa+Pr-mp--	cat@prep
+Spa+Pr-ms--	cat@prep
+Spa+Pt-fp--	cat@prep
+Spa+Pt-fs--	cat@prep
+Spa+Pt-mp--	cat@prep
+Spa+Pt-ms--	cat@prep
+Spd	cat@prep
+Sp-+Da-fp--da	cat@prep
+Sp-+Da-fp--dd	cat@prep
+Spd+Afpfp-	cat@prep
+Spd+Afpfs-	cat@prep
+Spd+Afpmp-	cat@prep
+Spd+Afpms-	cat@prep
+Sp-+Da-mp--da	cat@prep
+Sp-+Da-mp--dd	cat@prep
+Sp-+Da-ms--da	cat@prep
+Sp-+Da-ms--dd	cat@prep
+Spd+Pr-fp--	cat@prep
+Spd+Pr-fs--	cat@prep
+Spd+Pr-mp--	cat@prep
+Spd+Pr-ms--	cat@prep
+Spd+Pt-fp--	cat@prep
+Spd+Pt-fs--	cat@prep
+Spd+Pt-mp--	cat@prep
+Spd+Pt-ms--	cat@prep
+U	
+Vacp1p--	cat@verb type@avoir mode@cond tense@pres pers@1 num@pl
+Vacp1s--	cat@verb type@avoir mode@cond tense@pres pers@1 num@sing
+Vacp2p--	cat@verb type@avoir mode@cond tense@pres pers@2 num@pl
+Vacp2s--	cat@verb type@avoir mode@cond tense@pres pers@2 num@sing
+Vacp3p--	cat@verb type@avoir mode@cond tense@pres pers@3 num@pl
+Vacp3s--	cat@verb type@avoir mode@cond tense@pres pers@3 num@sing
+Vaif1p--	cat@verb type@avoir mode@ind tense@fut pers@1 num@pl
+Vaif1s--	cat@verb type@avoir mode@ind tense@fut pers@1 num@sing
+Vaif2p--	cat@verb type@avoir mode@ind tense@fut pers@2 num@pl
+Vaif2s--	cat@verb type@avoir mode@ind tense@fut pers@2 num@sing
+Vaif3p--	cat@verb type@avoir mode@ind tense@fut pers@3 num@pl
+Vaif3s--	cat@verb type@avoir mode@ind tense@fut pers@3 num@sing
+Vaii1p--	cat@verb type@avoir mode@ind tense@imp pers@1 num@pl
+Vaii1s--	cat@verb type@avoir mode@ind tense@imp pers@1 num@sing
+Vaii2p--	cat@verb type@avoir mode@ind tense@imp pers@2 num@pl
+Vaii2s--	cat@verb type@avoir mode@ind tense@imp pers@2 num@sing
+Vaii3p--	cat@verb type@avoir mode@ind tense@imp pers@3 num@pl
+Vaii3s--	cat@verb type@avoir mode@ind tense@imp pers@3 num@sing
+Vaip1p--	cat@verb type@avoir mode@ind tense@pres pers@1 num@pl
+Vaip1s--	cat@verb type@avoir mode@ind tense@pres pers@1 num@sing
+Vaip2p--	cat@verb type@avoir mode@ind tense@pres pers@2 num@pl
+Vaip2s--	cat@verb type@avoir mode@ind tense@pres pers@2 num@sing
+Vaip3p--	cat@verb type@avoir mode@ind tense@pres pers@3 num@pl
+Vaip3s--	cat@verb type@avoir mode@ind tense@pres pers@3 num@sing
+Vais1p--	cat@verb type@avoir mode@ind tense@past pers@1 num@pl
+Vais1s--	cat@verb type@avoir mode@ind tense@past pers@1 num@sing
+Vais2p--	cat@verb type@avoir mode@ind tense@past pers@2 num@pl
+Vais2s--	cat@verb type@avoir mode@ind tense@past pers@2 num@sing
+Vais3p--	cat@verb type@avoir mode@ind tense@past pers@3 num@pl
+Vais3s--	cat@verb type@avoir mode@ind tense@past pers@3 num@sing
+Vamp1p--	cat@verb type@avoir mode@imp tense@pres pers@1 num@pl
+Vamp2p--	cat@verb type@avoir mode@imp tense@pres pers@2 num@pl
+Vamp2s--	cat@verb type@avoir mode@imp tense@pres pers@2 num@sing
+Van-----	cat@verb type@avoir mode@inf
+Vapp----	cat@verb type@avoir mode@part tense@pres
+Vaps-pf-	cat@verb type@avoir mode@part tense@past num@pl gender@fem
+Vaps-pm-	cat@verb type@avoir mode@part tense@past num@pl gender@masc
+Vaps-sf-	cat@verb type@avoir mode@part tense@past num@sing gender@fem
+Vaps-sm-	cat@verb type@avoir mode@part tense@past num@sing gender@masc
+Vasi1p--	cat@verb type@avoir mode@subj tense@imp pers@1 num@pl
+Vasi1s--	cat@verb type@avoir mode@subj tense@imp pers@1 num@sing
+Vasi2p--	cat@verb type@avoir mode@subj tense@imp pers@2 num@pl
+Vasi2s--	cat@verb type@avoir mode@subj tense@imp pers@2 num@sing
+Vasi3p--	cat@verb type@avoir mode@subj tense@imp pers@3 num@pl
+Vasi3s--	cat@verb type@avoir mode@subj tense@imp pers@3 num@sing
+Vasp1p--	cat@verb type@avoir mode@subj tense@pres pers@1 num@pl
+Vasp1s--	cat@verb type@avoir mode@subj tense@pres pers@1 num@sing
+Vasp2p--	cat@verb type@avoir mode@subj tense@pres pers@2 num@pl
+Vasp2s--	cat@verb type@avoir mode@subj tense@pres pers@2 num@sing
+Vasp3p--	cat@verb type@avoir mode@subj tense@pres pers@3 num@pl
+Vasp3s--	cat@verb type@avoir mode@subj tense@pres pers@3 num@sing
+Vecp1p--	cat@verb type@etre mode@cond tense@pres pers@1 num@pl
+Vecp1s--	cat@verb type@etre mode@cond tense@pres pers@1 num@sing
+Vecp2p--	cat@verb type@etre mode@cond tense@pres pers@2 num@pl
+Vecp2s--	cat@verb type@etre mode@cond tense@pres pers@2 num@sing
+Vecp3p--	cat@verb type@etre mode@cond tense@pres pers@3 num@pl
+Vecp3s--	cat@verb type@etre mode@cond tense@pres pers@3 num@sing
+Veif1p--	cat@verb type@etre mode@ind tense@fut pers@1 num@pl
+Veif1s--	cat@verb type@etre mode@ind tense@fut pers@1 num@sing
+Veif2p--	cat@verb type@etre mode@ind tense@fut pers@2 num@pl
+Veif2s--	cat@verb type@etre mode@ind tense@fut pers@2 num@sing
+Veif3p--	cat@verb type@etre mode@ind tense@fut pers@3 num@pl
+Veif3s--	cat@verb type@etre mode@ind tense@fut pers@3 num@sing
+Veii1p--	cat@verb type@etre mode@ind tense@imp pers@1 num@pl
+Veii1s--	cat@verb type@etre mode@ind tense@imp pers@1 num@sing
+Veii2p--	cat@verb type@etre mode@ind tense@imp pers@2 num@pl
+Veii2s--	cat@verb type@etre mode@ind tense@imp pers@2 num@sing
+Veii3p--	cat@verb type@etre mode@ind tense@imp pers@3 num@pl
+Veii3s--	cat@verb type@etre mode@ind tense@imp pers@3 num@sing
+Veip1p--	cat@verb type@etre mode@ind tense@pres pers@1 num@pl
+Veip1s--	cat@verb type@etre mode@ind tense@pres pers@1 num@sing
+Veip2p--	cat@verb type@etre mode@ind tense@pres pers@2 num@pl
+Veip2s--	cat@verb type@etre mode@ind tense@pres pers@2 num@sing
+Veip3p--	cat@verb type@etre mode@ind tense@pres pers@3 num@pl
+Veip3s--	cat@verb type@etre mode@ind tense@pres pers@3 num@sing
+Veis1p--	cat@verb type@etre mode@ind tense@past pers@1 num@pl
+Veis1s--	cat@verb type@etre mode@ind tense@past pers@1 num@sing
+Veis2p--	cat@verb type@etre mode@ind tense@past pers@2 num@pl
+Veis2s--	cat@verb type@etre mode@ind tense@past pers@2 num@sing
+Veis3p--	cat@verb type@etre mode@ind tense@past pers@3 num@pl
+Veis3s--	cat@verb type@etre mode@ind tense@past pers@3 num@sing
+Vemp1p--	cat@verb type@etre mode@imp tense@pres pers@1 num@pl
+Vemp2p--	cat@verb type@etre mode@imp tense@pres pers@2 num@pl
+Vemp2s--	cat@verb type@etre mode@imp tense@pres pers@2 num@sing
+Ven-----	cat@verb type@etre mode@inf
+Vepp----	cat@verb type@etre mode@part tense@pres
+Veps----	cat@verb type@etre mode@part tense@past
+Vesi1p--	cat@verb type@etre mode@subj tense@imp pers@1 num@pl
+Vesi1s--	cat@verb type@etre mode@subj tense@imp pers@1 num@sing
+Vesi2p--	cat@verb type@etre mode@subj tense@imp pers@2 num@pl
+Vesi2s--	cat@verb type@etre mode@subj tense@imp pers@2 num@sing
+Vesi3p--	cat@verb type@etre mode@subj tense@imp pers@3 num@pl
+Vesi3s--	cat@verb type@etre mode@subj tense@imp pers@3 num@sing
+Vesp1p--	cat@verb type@etre mode@subj tense@pres pers@1 num@pl
+Vesp1s--	cat@verb type@etre mode@subj tense@pres pers@1 num@sing
+Vesp2p--	cat@verb type@etre mode@subj tense@pres pers@2 num@pl
+Vesp2s--	cat@verb type@etre mode@subj tense@pres pers@2 num@sing
+Vesp3p--	cat@verb type@etre mode@subj tense@pres pers@3 num@pl
+Vesp3s--	cat@verb type@etre mode@subj tense@pres pers@3 num@sing
+Vmcp1p--	cat@verb type@main mode@cond tense@pres pers@1 num@pl
+Vmcp1s--	cat@verb type@main mode@cond tense@pres pers@1 num@sing
+Vmcp2p--	cat@verb type@main mode@cond tense@pres pers@2 num@pl
+Vmcp2s--	cat@verb type@main mode@cond tense@pres pers@2 num@sing
+Vmcp3p--	cat@verb type@main mode@cond tense@pres pers@3 num@pl
+Vmcp3s--	cat@verb type@main mode@cond tense@pres pers@3 num@sing
+Vmif1p--	cat@verb type@main mode@ind tense@fut pers@1 num@pl
+Vmif1s--	cat@verb type@main mode@ind tense@fut pers@1 num@sing
+Vmif2p--	cat@verb type@main mode@ind tense@fut pers@2 num@pl
+Vmif2s--	cat@verb type@main mode@ind tense@fut pers@2 num@sing
+Vmif3p--	cat@verb type@main mode@ind tense@fut pers@3 num@pl
+Vmif3s--	cat@verb type@main mode@ind tense@fut pers@3 num@sing
+Vmii1p--	cat@verb type@main mode@ind tense@imp pers@1 num@pl
+Vmii1s--	cat@verb type@main mode@ind tense@imp pers@1 num@sing
+Vmii2p--	cat@verb type@main mode@ind tense@imp pers@2 num@pl
+Vmii2s--	cat@verb type@main mode@ind tense@imp pers@2 num@sing
+Vmii3p--	cat@verb type@main mode@ind tense@imp pers@3 num@pl
+Vmii3s--	cat@verb type@main mode@ind tense@imp pers@3 num@sing
+Vmip1p--	cat@verb type@main mode@ind tense@pres pers@1 num@pl
+Vmip1s--	cat@verb type@main mode@ind tense@pres pers@1 num@sing
+Vmip2p--	cat@verb type@main mode@ind tense@pres pers@2 num@pl
+Vmip2s--	cat@verb type@main mode@ind tense@pres pers@2 num@sing
+Vmip3p--	cat@verb type@main mode@ind tense@pres pers@3 num@pl
+Vmip3s--	cat@verb type@main mode@ind tense@pres pers@3 num@sing
+Vmis1p--	cat@verb type@main mode@ind tense@past pers@1 num@pl
+Vmis1s--	cat@verb type@main mode@ind tense@past pers@1 num@sing
+Vmis2p--	cat@verb type@main mode@ind tense@past pers@2 num@pl
+Vmis2s--	cat@verb type@main mode@ind tense@past pers@2 num@sing
+Vmis3p--	cat@verb type@main mode@ind tense@past pers@3 num@pl
+Vmis3s--	cat@verb type@main mode@ind tense@past pers@3 num@sing
+Vmmp1p--	cat@verb type@main mode@imp tense@pres pers@1 num@pl
+Vmmp2p--	cat@verb type@main mode@imp tense@pres pers@2 num@pl
+Vmmp2s--	cat@verb type@main mode@imp tense@pres pers@2 num@sing
+Vmn-----	cat@verb type@main mode@inf
+Vmpp----	cat@verb type@main mode@part tense@pres
+Vmps----	cat@verb type@main mode@part tense@past
+Vmps-pf-	cat@verb type@main mode@part tense@past num@pl gender@fem
+Vmps-pm-	cat@verb type@main mode@part tense@past num@pl gender@masc
+Vmps-sf-	cat@verb type@main mode@part tense@past num@sing gender@fem
+Vmps-sm-	cat@verb type@main mode@part tense@past num@sing gender@masc
+Vmsi1p--	cat@verb type@main mode@subj tense@imp pers@1 num@pl
+Vmsi1s--	cat@verb type@main mode@subj tense@imp pers@1 num@sing
+Vmsi2p--	cat@verb type@main mode@subj tense@imp pers@2 num@pl
+Vmsi2s--	cat@verb type@main mode@subj tense@imp pers@2 num@sing
+Vmsi3p--	cat@verb type@main mode@subj tense@imp pers@3 num@pl
+Vmsi3s--	cat@verb type@main mode@subj tense@imp pers@3 num@sing
+Vmsp1p--	cat@verb type@main mode@subj tense@pres pers@1 num@pl
+Vmsp1s--	cat@verb type@main mode@subj tense@pres pers@1 num@sing
+Vmsp2p--	cat@verb type@main mode@subj tense@pres pers@2 num@pl
+Vmsp2s--	cat@verb type@main mode@subj tense@pres pers@2 num@sing
+Vmsp3p--	cat@verb type@main mode@subj tense@pres pers@3 num@pl
+Vmsp3s--	cat@verb type@main mode@subj tense@pres pers@3 num@sing
+Xe	cat@noun
+Xf	cat@noun
+Xu	cat@noun

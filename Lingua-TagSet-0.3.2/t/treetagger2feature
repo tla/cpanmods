@@ -1,0 +1,33 @@
+ABR	cat@abr
+ADJ	cat@adj
+ADV	cat@adv
+DET:ART	cat@det
+DET:POS	cat@det type@poss
+INT	cat@interj
+KON	cat@cc|cs
+NAM	cat@noun type@proper
+NOM	cat@noun type@common
+NUM	cat@adj|det|noun
+PRO	cat@pron
+PRO:DEM	cat@pron type@dem
+PRO:IND	cat@pron type@ind
+PRO:PER	cat@pron type@pers
+PRO:POS	cat@pron type@poss
+PRO:REL	cat@pron type@rel
+PRP	cat@prep
+PRP:det	cat@prep
+PUN	cat@ponct
+PUN:cit	cat@ponct
+SENT	cat@pp
+SYM	cat@x
+VER:cond	cat@verb mode@cond tense@pres
+VER:futu	cat@verb mode@ind tense@fut
+VER:impe	cat@verb mode@imp tense@pres
+VER:impf	cat@verb mode@ind tense@imp
+VER:infi	cat@verb mode@inf tense@pres
+VER:pper	cat@verb mode@part tense@past
+VER:ppre	cat@verb mode@part tense@pres
+VER:pres	cat@verb mode@ind tense@pres
+VER:simp	cat@verb mode@ind tense@past
+VER:subi	cat@verb mode@subj tense@imp
+VER:subp	cat@verb mode@subj tense@pres

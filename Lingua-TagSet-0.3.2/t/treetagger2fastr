@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+use Lingua::TagSet::TreeTagger;
+use Lingua::TagSet::Fastr;
+
+while (<>) {
+    chomp;
+    print $_;
+    print "\t";
+    print Lingua::TagSet::Fastr->structure2tag(
+	Lingua::TagSet::TreeTagger->tag2structure($_)
+    );
+    print "\n";
+}

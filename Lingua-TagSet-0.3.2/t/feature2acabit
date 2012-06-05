@@ -1,0 +1,63 @@
+cat@abr	ABR
+cat@adj	ADJ:_:_
+cat@adj|det|noun	{ADJ|DTC|DTN}
+cat@adj gender@fem num@pl	ADJ:f:p
+cat@adj gender@fem num@sing	ADJ:f:s
+cat@adj gender@masc	ADJ:m:_
+cat@adj gender@masc num@pl	ADJ:m:p
+cat@adj gender@masc num@sing	ADJ:m:s
+cat@adj num@pl	ADJ:_:p
+cat@adj num@sing	ADJ:_:s
+cat@adv	ADV
+cat@cc	COO
+cat@cs	SUB
+cat@det gender@fem num@pl	{DTC|DTN}:f:p
+cat@det gender@fem num@sing	{DTC|DTN}:f:s
+cat@det gender@masc num@pl	{DTC|DTN}:m:p
+cat@det gender@masc num@sing	{DTC|DTN}:m:s
+cat@det num@pl	{DTC|DTN}:_:p
+cat@det num@sing	{DTC|DTN}:_:s
+cat@noun type@common	SBC:_:_
+cat@noun type@common gender@fem num@pl	SBC:f:p
+cat@noun type@common gender@fem num@sing	SBC:f:s
+cat@noun type@common gender@masc	SBC:m:_
+cat@noun type@common gender@masc num@pl	SBC:m:p
+cat@noun type@common gender@masc num@sing	SBC:m:s
+cat@noun type@common num@pl	SBC:_:p
+cat@noun type@common num@sing	SBC:_:s
+cat@noun type@proper	SBP
+cat@prep	PREP
+cat@pron gender@masc num@sing	PRO:_:m:s:_
+cat@pron num@sing	PRO:_:_:s:_
+cat@pron pers@3 gender@fem num@pl	PRO:3p:f:p:_
+cat@pron pers@3 gender@fem num@sing	PRO:3p:f:s:_
+cat@pron pers@3 gender@masc num@pl	PRO:3p:m:p:_
+cat@pron pers@3 gender@masc num@sing	PRO:3p:m:s:_
+cat@pron type@cli case@acc|obl	PRV:_:_:_:{a|o}
+cat@pron type@cli gender@masc num@sing	PRV:_:m:s:_
+cat@pron type@cli pers@1 num@pl	PRV:1p:_:p:_
+cat@pron type@cli pers@3 case@acc|dat	PRV:3p:_:_:{a|d}
+cat@pron type@cli pers@3 case@nom	PRV:3p:_:_:n
+cat@pron type@cli pers@3 gender@fem num@pl case@dat|nom|obl	PRV:3p:f:p:{d|n|o}
+cat@pron type@cli pers@3 gender@masc num@sing case@dat|nom|obl	PRV:3p:m:s:{d|n|o}
+cat@pron type@cli pers@3 gender@masc num@sing case@nom	PRV:3p:m:s:n
+cat@pron type@cli pers@3 num@sing case@acc	PRV:3p:_:s:a
+cat@pron type@cli pers@3 num@sing case@nom	PRV:3p:_:s:n
+cat@pron type@rel	REL:_:_
+cat@pron type@rel gender@masc num@sing	REL:m:s
+cat@verb	VCJ:_:_:_
+cat@verb mode@cond tense@pres pers@3 num@sing	VCJ:3p:s:pst:cond
+cat@verb mode@imp|ind tense@pres pers@1 num@pl	VCJ:1p:p:pst:{imper|ind}
+cat@verb mode@ind|subj tense@pres num@sing	VCJ:_:s:pst:{ind|subj}
+cat@verb mode@ind|subj tense@pres pers@3 num@pl	VCJ:3p:p:pst:{ind|subj}
+cat@verb mode@ind tense@imp pers@3 num@sing	VCJ:3p:s:impft:ind
+cat@verb mode@ind tense@past pers@3 num@sing	VCJ:3p:s:ps:ind
+cat@verb mode@ind tense@past|pres pers@3 num@sing	VCJ:3p:s:{ps|pst}:ind
+cat@verb mode@ind tense@pres pers@3 num@pl	VCJ:3p:p:pst:ind
+cat@verb mode@ind tense@pres pers@3 num@sing	VCJ:3p:s:pst:ind
+cat@verb mode@inf	VNCFF
+cat@verb mode@part tense@past gender@masc	{ADJ1PAR|ADJ2PAR|EPAR|VPAR}:m:_
+cat@verb mode@part tense@past num@sing gender@fem	{ADJ1PAR|ADJ2PAR|EPAR|VPAR}:f:s
+cat@verb mode@part tense@past num@sing gender@masc	{ADJ1PAR|ADJ2PAR|EPAR|VPAR}:m:s
+cat@verb mode@part tense@pres	VNCNT
+cat@x	{FGW|SYM}
