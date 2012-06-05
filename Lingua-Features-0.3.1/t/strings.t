@@ -12,10 +12,13 @@ close(STRINGS);
 plan tests => scalar @strings;
 
 foreach my $string (@strings) {
-    chomp $string;
-    is(
-	Lingua::Features::Structure->from_string($string)->to_string(),
-	$string,
-	"$string parsing"
-    );
+	chomp $string;
+	my( $orig, $new ) = split( / -\> /, $string );
+	$new = $orig unless $new;
+	# Skip backwards compatibility;
+	is(
+		Lingua::Features::Structure->from_string($orig)->to_string(),
+		$new,
+		"$string parsing"
+	);
 }

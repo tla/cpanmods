@@ -15,7 +15,7 @@ use warnings;
 
 my %types;
 
-Lingua::Features::FeatureType->_new(
+Lingua::Features::FeatureType->_new(  # types
     id     => 'det',
     values => {
         art  => 'article',
@@ -29,19 +29,30 @@ Lingua::Features::FeatureType->_new(
     }
 );
 
-Lingua::Features::FeatureType->_new(
+Lingua::Features::FeatureType->_new(  # types
     id     => 'adj',
     values => {
         qual => 'qualitative',
         ord  => 'ordinal',
-        ind  => 'indefi',
+        ind  => 'indefinite',
         poss => 'possessive',
         card => 'cardinal',
         int  => 'interrogative',
     }
 );
 
-Lingua::Features::FeatureType->_new(
+Lingua::Features::FeatureType->_new(  # types
+    id     => 'adv',
+    values => {
+        dem => 'demonstrative',
+        prop  => 'proper',
+        rel  => 'relative',
+        indef => 'indefinite',
+        int  => 'interrogative',
+    }
+);
+
+Lingua::Features::FeatureType->_new(  # types
     id     => 'noun',
     values => {
         common => 'common',
@@ -51,21 +62,38 @@ Lingua::Features::FeatureType->_new(
     }
 );
 
-Lingua::Features::FeatureType->_new(
+Lingua::Features::FeatureType->_new(  # types
     id     => 'pron',
     values => {
         pers => 'personal',
         dem  => 'demonstrative',
-        ind  => 'indefini',
+        ind  => 'indefinite',
         poss => 'possessive',
         int  => 'interrogative',
         rel  => 'relative',
-        cli  => 'clitique',
-        refl => 'reflexive'
+        cli  => 'clitic',
+        refl => 'reflexive',
+        rec  => 'reciprocal',
+        prop => 'proper',
     }
 );
 
-Lingua::Features::FeatureType->_new(
+Lingua::Features::FeatureType->_new(  # types
+    id     => 'conj',
+    values => {
+        co   => 'coordinating',
+        sub  => 'subordinating',
+    }
+);
+
+Lingua::Features::FeatureType->_new(  # types
+    id     => 'part',
+    values => {
+        mod => 'modal',
+    }
+);
+
+Lingua::Features::FeatureType->_new(  # types
     id     => 'verb',
     values => {
         avoir => 'avoir',
@@ -78,11 +106,14 @@ Lingua::Features::FeatureType->_new(
     id     => 'mode',
     values => {
         ind  => 'indicative',
-        subj => 'subjonctive',
+        subj => 'subjunctive',
         imp  => 'imperative',
         cond => 'conditionnal',
         inf  => 'infinitive',
-        part => 'participe',
+        part => 'participle',
+        gndv => 'gerundive',
+        gnd  => 'gerund',
+        sup  => 'supine',
     }
 );
 
@@ -90,9 +121,20 @@ Lingua::Features::FeatureType->_new(
     id     => 'tense',
     values => {
         pres => 'present',
-        imp  => 'imparfait',
+        imp  => 'imperfect',
         fut  => 'future',
         past => 'past',
+        perf => 'perfect',
+        plup => 'pluperfect',
+        fp   => 'future perfect',
+    }
+);
+
+Lingua::Features::FeatureType->_new(
+    id     => 'voice',
+    values => {
+        act  => 'active',
+        pass => 'passive',
     }
 );
 
@@ -108,16 +150,19 @@ Lingua::Features::FeatureType->_new(
 Lingua::Features::FeatureType->_new(
     id     => 'gender',
     values => {
-        masc => 'masculin',
-        fem  => 'feminin',
+        masc => 'masculine',
+        fem  => 'feminine',
+        neut => 'neuter',
+        comm => 'common',
     }
 );
 
 Lingua::Features::FeatureType->_new(
     id     => 'degree',
     values => {
-        comp => 'comp',
-        pos  => 'pos',
+        comp => 'comparative',
+        pos  => 'positive?',
+        sup  => 'superlative',
     }
 );
 
@@ -138,7 +183,9 @@ Lingua::Features::FeatureType->_new(
         nom => 'nominative',
         obl => 'oblique',
         ref => 'reflexive',
-        loc => 'locative'
+        loc => 'locative',
+        abl => 'ablative',
+        voc => 'vocative',
     }
 );
 

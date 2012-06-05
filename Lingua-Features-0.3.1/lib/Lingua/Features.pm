@@ -7,7 +7,7 @@ Lingua::Features - Natural languages features
 
 =head1 VERSION
 
-Version 0.3.1
+Version 0.3.2
 
 =head1 DESCRIPTION
 
@@ -47,7 +47,7 @@ use Lingua::Features::Structure;
 use strict;
 use warnings;
 
-our $VERSION = '0.3.1';
+our $VERSION = '0.3.2';
 
 =head1 COPYRIGHT AND LICENSE
 

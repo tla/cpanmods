@@ -6,7 +6,7 @@ use Test::More tests => 7;
 use strict;
 
 my $string1 = 'cat@noun type@proper gender@masc num@sing';
-my $string2 = 'cat@noun type@proper';
+my $string2 = 'cat@noun type@proper gender@fem|masc';
 my $string3 = 'cat@pron case@acc|dat|gen|obl';
 
 is(

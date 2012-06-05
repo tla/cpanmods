@@ -18,32 +18,151 @@ use warnings;
 my %types;
 
 Lingua::Features::StructureType->_new(
-    id => 'abr'
+    id   => 'abr',
+    desc => 'abbreviation'
 );
 
 Lingua::Features::StructureType->_new(
     id       => 'adj',
+    desc     => 'adjective',
     features => [ 
         type   => 'adj',
         degree => 'degree',
         gender => 'gender',
-        num    => 'num'
+        num    => 'num',
+        case   => 'case',
     ]
 );
 
 Lingua::Features::StructureType->_new(
-    id => 'adv',
+    id   => 'adv',
+    desc => 'adverb',
+	features => [ 
+		type   => 'adv',
+		degree => 'degree',
+	]
 );
 
 Lingua::Features::StructureType->_new(
     id   => 'advneg',
+    desc => 'adverb negative',
     base => 'adv'
 );
 
 Lingua::Features::StructureType->_new(
-    id => 'x'
+    id => 'conj',
+    desc => 'conjunction',
+    features => [
+    	type => 'conj'
+    ]
 );
 
+Lingua::Features::StructureType->_new(
+    id       => 'det',
+    desc     => 'determiner',
+    features => [
+        type    => 'det',
+        pers    => 'pers',
+        gender  => 'gender',
+        num     => 'num', 
+        numposs => 'num',
+        case    => 'case',
+        def     => 'def'
+    ]
+);
+
+Lingua::Features::StructureType->_new(
+    id => 'exist',
+    desc => 'existential',
+);
+
+Lingua::Features::StructureType->_new(
+    id => 'fw',
+    desc => 'foreign word',
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'interj',
+    desc => 'interjection'
+);
+
+Lingua::Features::StructureType->_new(
+    id       => 'noun',
+    desc     => 'noun',
+    features => [
+        type   => 'noun',
+        gender => 'gender',
+        num    => 'num', 
+        sem    => 'sem', 
+        case   => 'case',
+        degree => 'degree',
+    ]
+);
+
+Lingua::Features::StructureType->_new(
+	id   => 'part',
+	desc => 'particle',
+	features => [
+		type => 'part'
+	]
+);
+
+Lingua::Features::StructureType->_new(
+    id       => 'pron',
+    desc     => 'pronoun',
+    features => [
+        type    => 'pron',
+        pers    => 'pers',
+        gender  => 'gender',
+        num     => 'num',
+        case    => 'case',
+        degree  => 'degree',
+        numposs => 'num'
+    ]
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'punct',
+    desc => 'punctuation',
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'pp',
+    desc => 'phrase',
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'prep',
+    desc => 'preposition'
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'pref',
+    desc => 'prefix'
+);
+
+Lingua::Features::StructureType->_new(
+    id   => 'x',
+    desc => 'symbol',
+);
+
+Lingua::Features::StructureType->_new(
+    id       => 'verb',
+    desc     => 'verb',
+    features => [
+        type   => 'verb',
+        mode   => 'mode',
+        tense  => 'tense',
+        pers   => 'pers',
+        num    => 'num',
+		voice  => 'voice',
+        gender => 'gender',  # for participles
+		case   => 'case',    # for participles
+		degree => 'degree',  # for participles
+    ]
+);
+
+## Unused afaik
 Lingua::Features::StructureType->_new(
     id => 'cl'
 );
@@ -64,85 +183,11 @@ Lingua::Features::StructureType->_new(
 );
 
 Lingua::Features::StructureType->_new(
-    id       => 'det',
-    features => [
-        type    => 'det',
-        pers    => 'pers',
-        gender  => 'gender',
-        num     => 'num', 
-        numposs => 'num',
-        def     => 'def'
-    ]
-);
-
-Lingua::Features::StructureType->_new(
-    id       => 'noun',
-    features => [
-        type   => 'noun',
-        gender => 'gender',
-        num    => 'num', 
-        sem    => 'sem', 
-    ]
-);
-
-Lingua::Features::StructureType->_new(
-    id       => 'pron',
-    features => [
-        type    => 'pron',
-        pers    => 'pers',
-        gender  => 'gender',
-        num     => 'num',
-        case    => 'case',
-        numposs => 'num'
-    ]
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'ponct'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'pp'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'prep'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'pref'
-);
-
-Lingua::Features::StructureType->_new(
     id => 's'
 );
 
 Lingua::Features::StructureType->_new(
-    id       => 'verb',
-    features => [
-        type   => 'verb',
-        mode   => 'mode',
-        tense  => 'tense',
-        pers   => 'pers',
-        num    => 'num',
-        gender => 'gender'
-    ]
-);
-
-Lingua::Features::StructureType->_new(
     id => 'vm'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'cc'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'cs'
-);
-
-Lingua::Features::StructureType->_new(
-    id => 'interj'
 );
 
 # static methods
@@ -178,6 +223,7 @@ sub _new {
     my $self = bless {
         _id => $args{id},
     }, $class;
+    $self->{_desc} = $args{desc} if $args{desc};
 
     if ($args{base}) {
         $self->{_base} = $types{$args{base}};
@@ -211,6 +257,19 @@ sub id {
     my ($self) = @_;
     return unless ref $self;
     return $self->{_id};
+}
+
+=head2 $type->description()
+
+Returns a descriptive name for the structure type.
+
+=cut
+
+sub desc {
+	my( $self ) = @_;
+	return unless ref $self;
+	return unless exists $self->{_desc};
+	return $self->{_desc};
 }
 
 =head2 $type->base()

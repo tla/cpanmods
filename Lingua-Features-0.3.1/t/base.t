@@ -18,7 +18,7 @@ isa_ok(
 ok(
     eq_array(
 	[ Lingua::Features::StructureType->type('noun')->features() ],
-	[ qw/type gender num sem/ ]
+	[ qw/type gender num sem case degree/ ]
     ),
     'features list'
 );

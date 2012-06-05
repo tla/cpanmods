@@ -1,7 +1,10 @@
 cat@adv
 cat@advneg
-cat@cc
-cat@cs
+cat@cc -> cat@conj type@co
+cat@cs -> cat@conj type@sub
+cat@cc|cs -> cat@conj
+cat@conj type@co
+cat@conj type@sub
 cat@adj|det num@pl
 cat@adj|det gender@fem num@pl
 cat@adj|det gender@masc num@pl
@@ -14,7 +17,8 @@ cat@det gender@fem num@sing
 cat@det gender@masc num@sing
 cat@interj
 cat@noun
-cat@ponct
+cat@ponct -> cat@punct
+cat@punct
 cat@prep
 cat@pron
 cat@pron gender@masc num@pl

@@ -78,6 +78,30 @@ sub from_string {
         my ($id, $values) = split(/\Q$id_delimiter\E/, $feature);
         $features{$id} = [ split(/\Q$value_delimiter\E/, $values) ];
     }
+    
+    # Backwards compatibility
+    my %newcat;
+    map { 
+    	my $x = $_; 
+    	$x = 'punct' if $_ eq 'ponct'; 
+    	$x = 'conj' if $_ =~ /^c[cs]$/;
+    	$newcat{$_} = $x 
+    	} @{$features{cat}};
+    
+    # If we have cc|cs, it is conj with no type. Otherwise conj with
+    # the appropriate type.
+    if( exists $newcat{'cc'} ) {
+    	if( exists $newcat{'cs'} ) {
+    		delete $newcat{'cs'};
+    	} else {
+    		push( @{$features{'type'}}, 'co' );
+    	}
+    }
+    if( exists $newcat{'cs'} ) {
+    	push( @{$features{'type'}}, 'sub' )
+    		unless exists $newcat{'cc'};
+    }
+    $features{cat} = [ values %newcat ];
 
     return $class->new(%features);
 }
