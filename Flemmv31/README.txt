@@ -1,7 +1,7 @@
 ###########################################################################
-# FLEMM-v3.1 -- French Lemmatizer : Lemmatisation du français à partir de # 
-# corpus étiquetés - Version 3.1				          #
-# Copyright (C) 2004 (NAMER Fiammetta)					  #
+# FLEMM-v3.1 -- French Lemmatizer : Lemmatisation du franÃ§ais Ã  partir de # 
+# corpus Ã©tiquetÃ©s - Version 3.1                                          #
+# Copyright (C) 2004 (NAMER Fiammetta)                                    #
 ###########################################################################
 
 
@@ -31,13 +31,9 @@ XML structures.
 To test Flemmv3.1
 ===============
 
-1) be sure to add the Flemmv3.1 directory address to the PERL5LIB environment variable, e.g.
-   export PERL5LIB=~/Flemmv31
-
-2) run :
-   perl flemm.pl --entree ~/Flemmv31/tests/agatha.input --log --logname test_bll_1 --progress --format normal --tagger brill
-   perl flemm.pl --entree ~/Flemmv31/tests/test_tt_1.input --sortie ~/Flemmv31/tests/test_tt_1.xml --format xml --tagger treetagger
-
+ run :
+   perl script/flemm.pl --entree tests/agatha.input --log --logname test_bll_1 --progress --format normal --tagger brill
+   perl script/flemm.pl --entree tests/test_tt_1.input --sortie ~/Flemmv31/tests/test_tt_1.xml --format xml --tagger treetagger
 
 
 
@@ -147,10 +143,10 @@ while (<>) {
 ----------------------------------------
 ----------------------------------------
 
-echo 'fabrique/VCJ:sg' | perl exple.pl   
+echo 'fabrique/VCJ:sg' | perl -CDS exple.pl   
 
      -->
-     fabrique/VCJ:Vmip1s--1	fabriquer || fabrique/VCJ:Vmip3s--1	fabriquer || fabrique/VCJ:Vmmp2s--1	fabriquer || fabrique/VCJ:Vmsp1s--1	fabriquer || fabrique/VCJ:Vmsp3s--1	fabriquer   
+     fabrique/VCJ:Vmip1s--1     fabriquer || fabrique/VCJ:Vmip3s--1     fabriquer || fabrique/VCJ:Vmmp2s--1     fabriquer || fabrique/VCJ:Vmsp1s--1     fabriquer || fabrique/VCJ:Vmsp3s--1     fabriquer   
 
 2) The example below produces an xml formatted result from a TreeTagger tagged
 input:
@@ -160,8 +156,10 @@ exple.pl
 ----------------------------------------
   use Flemm;
   use Flemm::Result;
+  binmode STDIN, 'encoding(UTF-8)';
+  binmode STDOUT, ':utf8';
   my $lemm=new Flemm( );
-  print "<?xml version='1.0' encoding='ISO-8859-1'?>\n\n";
+  print "<?xml version='1.0' encoding='utf-8'?>\n\n";
   print "<FlemmResults>\n";
   while (<>) {
     chomp;
@@ -172,16 +170,16 @@ exple.pl
 ----------------------------------------
 ----------------------------------------
 
-echo 'généralisent	VER:pres	généraliser' | perl exple.pl
+echo 'gÃ©nÃ©ralisent	VER:pres	gÃ©nÃ©raliser' | perl -CDS exple.pl
 
    -->
 
 <FlemmResult>
-      <InflectedForm>généralisent</InflectedForm>
+      <InflectedForm>gÃ©nÃ©ralisent</InflectedForm>
       <Category original-tagger='VER:pres'>VER(pres)</Category>
-      <Analyses> <!-- généralisent      VER(pres):Vmip3p--1      généraliser || généralisent      VER(pres):Vmsp3p--1      généraliser -->
+      <Analyses> <!-- gÃ©nÃ©ralisent      VER(pres):Vmip3p--1      gÃ©nÃ©raliser || gÃ©nÃ©ralisent      VER(pres):Vmsp3p--1      gÃ©nÃ©raliser -->
             <Analyse>
-                  <Lemme>généraliser</Lemme>
+                  <Lemme>gÃ©nÃ©raliser</Lemme>
                   <Features>
                         <Feature name='catmultext' value='V'/>
                         <Feature name='type' value='m'/>
@@ -195,7 +193,7 @@ echo 'généralisent	VER:pres	généraliser' | perl exple.pl
                   </Features>
             </Analyse>
             <Analyse>
-                  <Lemme>généraliser</Lemme>
+                  <Lemme>gÃ©nÃ©raliser</Lemme>
                   <Features>
                         <Feature name='catmultext' value='V'/>
                         <Feature name='type' value='m'/>
@@ -215,37 +213,42 @@ echo 'généralisent	VER:pres	généraliser' | perl exple.pl
 3) In the distribution, several testing programs are provided with
 relevant input samples :
 
-Program name |  Requested tagger | Output      Format	| Logfiles
-	     |  on the input     |			|		
+Program name |  Requested tagger | Output      Format   | Logfiles
+             |  on the input     |                      |               
 ==================================================================
-flem_ex1.pl  |   brill		 | flat structures,     | yes
-	     |			 |  1 per line		|
+flem_ex1.pl  |   brill           | flat structures,     | yes
+             |                   |  1 per line          |
 ex : 
 perl flem_ex1.pl < tests/test_bll_1.input > tests/test_bll_1_1.plat
 perl flem_ex1.pl < tests/agatha.bll > tests/agatha_bll_1.plat
 ------------------------------------------------------------------
-flem_ex2.pl  |   tt		 | xml  structures,     | no
-	     |			 |       		|
+flem_ex2.pl  |   tt              | xml  structures,     | no
+             |                   |                      |
 ex 
 perl flem_ex2.pl < tests/test_tt_1.input > tests/test_tt_12.xml 
 perl flem_ex2.pl < tests/pls.tt > tests/pls_2.xml
 ------------------------------------------------------------------
-flem_ex3.pl  |   brill		 |flat  structures,     | no
-	     |			 | 1 paragraph per line |
+flem_ex3.pl  |   brill           |flat  structures,     | no
+             |                   | 1 paragraph per line |
 ex 
 perl flem_ex3.pl < tests/agatha.bll > tests/agatha_bll_3.plat
 ------------------------------------------------------------------
-flem_ex4.pl  |   brill		 | xml  structures,     | no
-	     |			 |              	|
+flem_ex4.pl  |   brill           | xml  structures,     | no
+             |                   |                      |
 ex : 
 perl flem_ex4.pl < tests/test_bll_1.input > tests/test_bll_1_4.xml
 perl flem_ex4.pl < tests/agatha.bll > tests/agatha_bll_4.xml
 ------------------------------------------------------------------
-flem_ex5.pl  |   tt		 | flat structures,     | yes
-	     |			 |  1 per line		|
+flem_ex5.pl  |   tt              | flat structures,     | yes
+             |                   |  1 per line          |
 ex 
 perl flem_ex5.pl < tests/test_tt_1.input > tests/test_tt_15.plat 
 perl flem_ex5.pl < tests/pls.tt > tests/pls_5.plat
+------------------------------------------------------------------
+flem_ex6.pl  |   brill,          | structures plates,   | oui
+             |    ISO-8859-1     |  1 par ligne         |
+ex : 
+perl flem_ex6.pl < tests/test_bll_1.iso1.input > tests/test_bll_1_1.iso1.plat
 
 4) flemm.pl is a more complete test program. It is provided with several options :
 
@@ -255,12 +258,15 @@ Usage: perl flemm.pl       --entree input_file_address
                           [--logname logfile_prefixes]
                           [--progess]
                           [--format (normal|xml)]
+                          [--enc (utf8|ISO-8859-1|...)]
                           [--tagger (brill|treetagger)]
 
 Arguments between [] are optional.
 
 When --progress is chosen, a mark is displayed on the standard output,
 that indicates the parsing progression
+
+Any encoding listed in 'perldoc Encode::Supported' may be given for --enc.
  
 By default :
 
@@ -273,6 +279,8 @@ By default :
   prefix is provided as --logname value. 
 
 - when --tagger is omitted, the default tagger is Treetagger
+
+- when --enc is omitted, the default encoding is 'utf8'.
 
 
 =====================
@@ -296,7 +304,7 @@ phytoplanctivores / ADJ2PAR ==>  phytoplanctivores/ADJ
 2) Segmentation log file
 -------------------------
 
-,inhibiteurs  est réduit à inhibiteurs (SBC) 
+,inhibiteurs  est rÃ©duit Ã  inhibiteurs (SBC) 
 
 
 ====================
@@ -305,52 +313,67 @@ Distribution Content
 
 The following modules and subdirectories are included in the Flemmv31 tree:
 
-Flemmv31:			 /Main module, and testing programs/
+Flemmv31:                               /Package base and main script/
 =========
-Flemm.pm	LICENCE.txt	README.txt	flemm.pl
-flem_ex1.pl	flem_ex2.pl	flem_ex3.pl	flem_ex4.pl
-flem_ex5.pl
+LICENCE.txt     README.txt      LISMOI.txt
+flemm.pl
 
+Flemmv31/script:                /main script and testing programs/
+=============
+flemm.pl        
+flem_ex1.pl     flem_ex2.pl     flem_ex3.pl     flem_ex4.pl 
+flem_ex5.pl     flem_ex6.pl
 
-Flemmv31/Flemm:		/packages required to run Flemm.pm/
+Flemmv31/lib:                    /Main module/
+=========
+Flemm.pm                
+
+Flemmv31/lib/Flemm:             /packages required to run Flemm.pm/
 ===============
-Analyse.pm	Analyses.pm	Brill.pm	Exceptions.pm
-Feature.pm	Features.pm	Lemmatizer.pm	Result.pm
+Analyse.pm      Analyses.pm     Brill.pm        Exceptions.pm
+Feature.pm      Features.pm     Lemmatizer.pm   Result.pm
 TreeTagger.pm 
 
-Flemmv31/Flemm/Utils:	/utils packages/
+Flemmv31/lib/Flemm/Utils:       /utils packages/
 =====================
 List.pm
 
-Flemmv31/tests:		/sample input files, to be runned with the
-===============    	testing programs : test_bll_1.input and
-			agatha.bll are tagged with Brill,
-			test_tt_1.input and pls.tt are tagged with
-			Treetagger/  
+Flemmv31/tests:         /sample input files, to be run with the
+===============         testing programs : test_bll_1.input and
+                        agatha.bll are tagged with Brill,
+                        test_tt_1.input and pls.tt are tagged with
+                        Treetagger/  
 
-test_bll_1.input	test_tt_1.input
-agatha.bll		pls.tt
+agatha.bll              test_bll_1.input        test_tt_1.input
+pls.tt                  test_bll_1.iso1.input
 
 
-Flemmv31/EXCEP:		/the set of exception lists/
+Flemmv31/lib/EXCEP:             /the set of exception lists/
 ===============
-adjectifs_finissant_par_CCe	adjectifs_finissant_par_Ve	adjectifs_finissant_par_aOUos
-adjectifs_finissant_par_an_e	adjectifs_finissant_par_ane	adjectifs_finissant_par_ere
-adjectifs_finissant_par_ine	adjectifs_finissant_par_is	adjectifs_finissant_par_man_e
-adjectifs_finissant_par_oOUil	adjectifs_finissant_par_ol	adjectifs_finissant_par_sOUte
-adjectifs_finissant_par_sse_s	adjectifs_finissant_par_ure	adjectifs_finissant_par_us
-noms_finissant_par_AEus		noms_finissant_par_Cs		noms_finissant_par_ail_x
-noms_finissant_par_as		noms_finissant_par_au_x		noms_finissant_par_aux
-noms_finissant_par_e_ee		noms_finissant_par_euse		noms_finissant_par_eux
-noms_finissant_par_i_s		noms_finissant_par_ier_e	noms_finissant_par_os
-noms_finissant_par_ou_x		noms_finissant_par_ous		noms_finissant_par_u_s
-noms_finissant_par_ys		verbes_finissant_par_ERer	verbes_finissant_par_FPHer
-verbes_finissant_par_ayer	verbes_finissant_par_eCer_naccent	verbes_finissant_par_eLer_aigu
-verbes_finissant_par_eMer_naccent	verbes_finissant_par_eNTer_aigu	verbes_finissant_par_ePer_naccent
-verbes_finissant_par_eRer_naccent	verbes_finissant_par_eSer_naccent	verbes_finissant_par_eVer_aigu
-verbes_finissant_par_ier	verbes_finissant_par_igner	verbes_finissant_par_irer
-verbes_finissant_par_isser	verbes_finissant_par_ller	verbes_finissant_par_tter
-
+adjectifs_finissant_par_CCe             noms_finissant_par_i_s
+adjectifs_finissant_par_Ve              noms_finissant_par_ier_e
+adjectifs_finissant_par_aOUos           noms_finissant_par_os
+adjectifs_finissant_par_an_e            noms_finissant_par_ou_x
+adjectifs_finissant_par_ane             noms_finissant_par_ous
+adjectifs_finissant_par_ere             noms_finissant_par_u_s
+adjectifs_finissant_par_ine             noms_finissant_par_ys
+adjectifs_finissant_par_is              verbes_finissant_par_ERer
+adjectifs_finissant_par_man_e           verbes_finissant_par_FPHer
+adjectifs_finissant_par_oOUil           verbes_finissant_par_ayer
+adjectifs_finissant_par_ol              verbes_finissant_par_eCer_naccent
+adjectifs_finissant_par_sOUte           verbes_finissant_par_eLer_aigu
+adjectifs_finissant_par_sse_s           verbes_finissant_par_eMer_naccent
+adjectifs_finissant_par_ure             verbes_finissant_par_eNTer_aigu
+adjectifs_finissant_par_us              verbes_finissant_par_ePer_naccent
+noms_finissant_par_AEus                 verbes_finissant_par_eRer_naccent
+noms_finissant_par_Cs                   verbes_finissant_par_eSer_naccent
+noms_finissant_par_ail_x                verbes_finissant_par_eVer_aigu
+noms_finissant_par_as                   verbes_finissant_par_ier
+noms_finissant_par_au_x                 verbes_finissant_par_igner
+noms_finissant_par_aux                  verbes_finissant_par_irer
+noms_finissant_par_e_ee                 verbes_finissant_par_isser
+noms_finissant_par_euse                 verbes_finissant_par_ller
+noms_finissant_par_eux                  verbes_finissant_par_tter
 
 
 
