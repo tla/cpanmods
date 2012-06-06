@@ -1,0 +1,369 @@
+###########################################################################
+# FLEMM-v3.1 -- French Lemmatizer : Lemmatisation du français à partir de # 
+# corpus étiquetés - Version 3.1				          #
+# Copyright (C) 2004 (NAMER Fiammetta)					  #
+###########################################################################
+
+
+
+FLEMMv3.1 est un ensemble de modules Perl5 qui effectue l'analyse
+flexionnelle de formes félchies de textes en français qui ont au préallable été
+étiquetés, au moyen de l'un des deux catégorisateurs : Brill ou
+TreeTagger. C'est un petit programme (60kb au format zippé, à
+l'exclusion des programmes et corpus test), principalement basé sur
+l'usage de règles (un lexique de 3000 mots seulement est utilisé pour
+prendre en compte les exceptions). Il fonctionne sur PC ou station de
+travail, sous Unix, Linux ou Windows9x/NT/XP.
+
+Les objets résultat renvoyés par Flemm sont susceptibles d'être
+affichés en tant que structures XML.
+
+
+	 - Pour tester Flemmv3.1
+	 - Changements par rapport à la version précédente
+	 - Format d'entrée
+	 - Description
+	 - Exemples et programmes de test
+	 - Autres fonctionnalités
+	 - Contenu de la distribution
+
+=====================
+Pour tester Flemmv3.1
+=====================
+
+1) S'assurer que l'adresse du répertoire d'installation de Flemmv3.1
+est ajoutée à la variable d'environnement PER5LIB, e.g.:
+
+   export PERL5LIB=~/Flemmv31
+
+2) Exécuter :
+
+   perl flemm.pl --entree ~/Flemmv31/tests/agatha.input --log --logname test_bll_1 --progress --format normal --tagger brill
+   perl flemm.pl --entree ~/Flemmv31/tests/test_tt_1.input --sortie ~/Flemmv31/tests/test_tt_1.xml --format xml --tagger treetagger
+
+
+
+
+===============================================
+Changements par rapport à la version précédente
+===============================================
+
+- mise à jour par rapport au nouveau jeu d'étiquettes de TreeTagger
+  (3.1)
+- résultats conçus sous forme d'APIs en Perl
+- modules entièrement documentés (voir fonction perldoc)
+- traits flexionnels formatés selon les recommandations de Multext
+- les deux modes d'affichage possibles des résultats sont le mode
+linéaire, et le format XML.
+
+
+Voir détails ci-dessous
+
+===============
+Format d'entrée
+===============
+
+Il faut fournir à Flemm en entrée une forme fléchie munie d'une
+catégorie grammaticale. A ce jour, les deux seuls étiqueteurs acceptés
+par Flemm sont Brill, entraîné pour le français 
+(http://www.atilf.fr/WinBrill)
+et Treetagger
+(http://www.ims.uni-stuttgart.de/projekte/corplex/TreeTagger/DecisionTreeTagger.html). 
+
+
+===========
+Description
+===========
+
+Flemm calcule le lemme de chaque mot fléchie (en fonction de
+l'étiquette) et fournit également les traits flexionnels principaux :
+
+- genre et nombre pour les adjectifs, déterminants, participes
+- nombre pour les noms
+- genre, nombre, personne et cas pour les pronoms
+- nombre, personne, temps, mode and groupe de conjugaison pour les verbes
+
+Les traits sont codés en fonction des spécifications lexicales
+recommandées pour le français par le consortium Multext
+(http://www.lpl.univ-aix.fr/projects/multext), sous leur forme compacte.
+En plus des traits standards, un champ a été ajouté pour les verbes,
+de manière à coder leur famille flexionnelle (1er, 2e ou 3e groupe).
+Le tableau ci-dessous résume les tables attribut-valeur pour les
+partie du discours fléchissables. Voir le site Multext pour une
+information détaillée à propos de la signification des codes de
+valeur, ainsi que leur correspondance.
+
+
+==================================================================
+Noms  | cat | type | Gend | Nb | Case | SemType
+------------------------------------------------------------------
+      | N   | c,p  | m,f  | s,p|  -   |  -
+==================================================================
+Verbes| cat | type | Mood | Tns| Pers | Nb | Gend | Clitics |Group
+------------------------------------------------------------------
+      | V   | m,a  |i,s,m,|p,i,|1,2,3 |s,p |m,f   | -       |1,2,3
+                   |n,p   |f,s
+==================================================================
+Adj   | cat | type    | dgr  |gend| nb | Case
+------------------------------------------------------------------
+      | A   | f,o,i,s | -    |m,f |s,p | -
+==================================================================
+Pro   | cat | type         | pers |gend| nb | case | poss
+------------------------------------------------------------------
+      | P   |p,d,i,s,t,r,x |1,2,3 |m,f |s,p | n,j,o| s,p
+==================================================================
+Det   | Cat | Type    | Pers |gend| nb | case | poss | quant
+------------------------------------------------------------------
+      | D   |a,d,i,s,t| 1,2,3|m,f |s,p |  -   | s,p  |d,i
+==================================================================
+PrepDet| Cat| Type | Pers |gend| nb | case | poss | quant
+------------------------------------------------------------------
+       |Sp+D|  a   |   -  |m,f |s,p |  -   |  -   |d
+==================================================================             
+                    
+
+De plus, Flemm vérifie et corrige un certain nombre d'erreurs de
+segmentation ou d'étiquetage. 
+Quand cela est demandé par l'utilisateur, les erreurs détectées, ainsi
+que leurs corrections correspondantes sont reportées dans des fichiers spéciaux.
+
+Quel que soit le résultat de la vérification de l'étiquetage, Flemm
+renvoie l'étiquette d'origine, telle qu'elle avait été produite par l'étiqueteur.
+
+
+========
+Exemples
+========
+
+
+1) Les exemples ci-dessous produisent en sortie un résultat linéaire à
+partir d'une forme d'entrée étiquetée par Brill:
+
+----------------------------------------
+exple.pl
+----------------------------------------
+use Flemm;
+use Flemm::Result;
+my $lemm=new Flemm("Tagger" => "brill");
+while (<>) {
+    chomp;
+    my $res = $lemm->lemmatize($_);
+    print $res->getResult."\n";
+}
+----------------------------------------
+----------------------------------------
+
+echo 'fabrique/VCJ:sg' | perl exple.pl   
+
+     -->
+     fabrique/VCJ:Vmip1s--1	fabriquer || fabrique/VCJ:Vmip3s--1	fabriquer || fabrique/VCJ:Vmmp2s--1	fabriquer || fabrique/VCJ:Vmsp1s--1	fabriquer || fabrique/VCJ:Vmsp3s--1	fabriquer   
+
+2) L'exemple ci-dessous produit un résultat formatté en XML à partir
+d'un input étiqueté par TreeTagger :
+
+----------------------------------------
+exple.pl
+----------------------------------------
+  use Flemm;
+  use Flemm::Result;
+  my $lemm=new Flemm( );
+  print "<?xml version='1.0' encoding='ISO-8859-1'?>\n\n";
+  print "<FlemmResults>\n";
+  while (<>) {
+    chomp;
+    my $res=$lemm->lemmatize($_);
+    print $res->asXML."\n";
+  }
+  print "</FlemmResults>\n";
+----------------------------------------
+----------------------------------------
+
+echo 'généralisent	VER:pres	généraliser' | perl exple.pl
+
+   -->
+
+<FlemmResult>
+      <InflectedForm>généralisent</InflectedForm>
+      <Category original-tagger='VER:pres'>VER(pres)</Category>
+      <Analyses> <!-- généralisent      VER(pres):Vmip3p--1      généraliser || généralisent      VER(pres):Vmsp3p--1      généraliser -->
+            <Analyse>
+                  <Lemme>généraliser</Lemme>
+                  <Features>
+                        <Feature name='catmultext' value='V'/>
+                        <Feature name='type' value='m'/>
+                        <Feature name='mood' value='i'/>
+                        <Feature name='tense' value='p'/>
+                        <Feature name='pers' value='3'/>
+                        <Feature name='gend' value='-'/>
+                        <Feature name='nb' value='p'/>
+                        <Feature name='clitic' value='-'/>
+                        <Feature name='vclass' value='1'/>
+                  </Features>
+            </Analyse>
+            <Analyse>
+                  <Lemme>généraliser</Lemme>
+                  <Features>
+                        <Feature name='catmultext' value='V'/>
+                        <Feature name='type' value='m'/>
+                        <Feature name='mood' value='s'/>
+                        <Feature name='tense' value='p'/>
+                        <Feature name='pers' value='3'/>
+                        <Feature name='gend' value='-'/>
+                        <Feature name='nb' value='p'/>
+                        <Feature name='clitic' value='-'/>
+                        <Feature name='vclass' value='1'/>
+                  </Features>
+            </Analyse>
+      </Analyses>
+
+</FlemmResult>
+
+3) Dans la distribution, plusieurs programmes de test sont fournis
+avec les corpus d'entrée pertinents :
+
+
+Nom du Pgme  |  Etiqueteur requis| Format de sortie	| Fichiers
+	     |  sur l'entrée     |			|  log
+==================================================================
+flem_ex1.pl  |   brill		 | structures plates,   | oui
+	     |			 |  1 par ligne		|
+ex : 
+perl flem_ex1.pl < tests/test_bll_1.input > tests/test_bll_1_1.plat
+perl flem_ex1.pl < tests/agatha.bll > tests/agatha_bll_1.plat
+------------------------------------------------------------------
+flem_ex2.pl  |   tt		 | structures xml ,     | non
+	     |			 |  1 par ligne		|
+ex 
+perl flem_ex2.pl < tests/test_tt_1.input > tests/test_tt_12.xml 
+perl flem_ex2.pl < tests/pls.tt > tests/pls_2.xml
+------------------------------------------------------------------
+flem_ex3.pl  |   brill		 |structures plates,    | non
+	     |			 |1 paragraphe par ligne|
+ex 
+perl flem_ex3.pl < tests/agatha.bll > tests/agatha_bll_3.plat
+------------------------------------------------------------------
+flem_ex4.pl  |   brill		 | structures   xml,    | non
+	     |			 |  1 par ligne    	|
+ex : 
+perl flem_ex4.pl < tests/test_bll_1.input > tests/test_bll_1_4.xml
+perl flem_ex4.pl < tests/agatha.bll > tests/agatha_bll_4.xml
+------------------------------------------------------------------
+flem_ex5.pl  |   tt		 | structures plates,   | oui
+	     |			 |  1 par ligne 	|
+ex 
+perl flem_ex5.pl < tests/test_tt_1.input > tests/test_tt_15.plat 
+perl flem_ex5.pl < tests/pls.tt > tests/pls_5.plat
+
+4) flemm.pl est un programme de test plus complet. Il s'accompagne de
+plusieurs options:
+
+
+Usage: perl flemm.pl       --entree adresse_fichier_d_entree
+                          [--sortie adresse_fichier_de_sortie]
+                          [--log]
+                          [--logname prefixe_fichiers_log]
+                          [--progess]
+                          [--format (normal|xml)]
+                          [--tagger (brill|treetagger)]
+
+Les arguments entre [] sont optionelles.
+
+Quand --progress est choisi, une marque est affichée sur la sortie
+standard, qui indique la progression de l'analyse.
+ 
+Par défaut :
+
+- Quand --sortie n'est pas fourni, le résultat est affiché dans le
+fichier adresse_fichier_d_entree.lemm
+
+- Quand --log n'est pas mentionné, il n'y a pas de fichier log pour le
+stockage de la correction des erreurs de segmentation/étiquetage
+(quand il y en a). Quand --log est fourni, les noms des fichiers log
+sont préfixés par adresse_fichier_d_entree, sauf si un préfixe est
+fourni, comme valeur de --logname.
+
+- Quand --tagger est omis, l'étiqueteur par défaut est Treetagger
+
+
+======================
+Autres Fonctionnalités
+======================
+
+Flemm vérifie et corrige les erreurs de segmentation et étiquetage
+Quand cela est demandé par l'utilisateur, les erreurs détectées, ainsi
+que les corrections correspondantes, sont reportées dans des fichiers spéciaux.
+
+
+Exemples : 
+
+
+1) Fichier log d'étiquetage
+---------------------------
+
+phytoplancton / VNCFF ==>  phytoplancton/SBC
+phytoplanctivores / ADJ2PAR ==>  phytoplanctivores/ADJ
+
+2) Fichier log de segmentation
+------------------------------
+
+,inhibiteurs  est réduit à inhibiteurs (SBC) 
+
+
+==========================
+Contenu de la Distribution
+==========================
+
+Les modules et sous-répertoires suivants sont inclus dans
+l'arborescence Flemmv3.1
+
+Flemmv31:			 /Modules principaux, et programmes de test/
+=========
+Flemm.pm	LICENCE.txt	README.txt	flemm.pl
+flem_ex1.pl	flem_ex2.pl	flem_ex3.pl	flem_ex4.pl
+flem_ex5.pl
+
+
+Flemmv31/Flemm:			/packages requis pour exécuter Flemm.pm/
+===============
+Analyse.pm	Analyses.pm	Brill.pm	Exceptions.pm
+Feature.pm	Features.pm	Lemmatizer.pm	Result.pm
+TreeTagger.pm 
+
+Flemmv31/Flemm/Utils:		/packages utilitaires/
+=====================
+List.pm
+
+Flemmv31/tests:		         /échantillons de fichiers d'input, a éxécuter
+				 avec les programmes test :  test_bll_1.input et 
+==========================       agatha.bll sont étiquetés par Brill,
+			         test_tt_1.input et pls.tt sont étiquetés par
+			         Treetagger/  
+
+test_bll_1.input	test_tt_1.input
+agatha.bll		pls.tt
+
+
+Flemmv31/EXCEP:			/L'ensemble des listes d'exception/
+===============
+adjectifs_finissant_par_CCe	adjectifs_finissant_par_Ve	adjectifs_finissant_par_aOUos
+adjectifs_finissant_par_an_e	adjectifs_finissant_par_ane	adjectifs_finissant_par_ere
+adjectifs_finissant_par_ine	adjectifs_finissant_par_is	adjectifs_finissant_par_man_e
+adjectifs_finissant_par_oOUil	adjectifs_finissant_par_ol	adjectifs_finissant_par_sOUte
+adjectifs_finissant_par_sse_s	adjectifs_finissant_par_ure	adjectifs_finissant_par_us
+noms_finissant_par_AEus		noms_finissant_par_Cs		noms_finissant_par_ail_x
+noms_finissant_par_as		noms_finissant_par_au_x		noms_finissant_par_aux
+noms_finissant_par_e_ee		noms_finissant_par_euse		noms_finissant_par_eux
+noms_finissant_par_i_s		noms_finissant_par_ier_e	noms_finissant_par_os
+noms_finissant_par_ou_x		noms_finissant_par_ous		noms_finissant_par_u_s
+noms_finissant_par_ys		verbes_finissant_par_ERer	verbes_finissant_par_FPHer
+verbes_finissant_par_ayer	verbes_finissant_par_eCer_naccent	verbes_finissant_par_eLer_aigu
+verbes_finissant_par_eMer_naccent	verbes_finissant_par_eNTer_aigu	verbes_finissant_par_ePer_naccent
+verbes_finissant_par_eRer_naccent	verbes_finissant_par_eSer_naccent	verbes_finissant_par_eVer_aigu
+verbes_finissant_par_ier	verbes_finissant_par_igner	verbes_finissant_par_irer
+verbes_finissant_par_isser	verbes_finissant_par_ller	verbes_finissant_par_tter
+
+
+
+
+
+
