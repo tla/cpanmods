@@ -235,7 +235,7 @@ our @id_maps = (
     
 );
 
-our %value_maps = {};
+our %value_maps = ();
 
 __PACKAGE__->_init();
 
