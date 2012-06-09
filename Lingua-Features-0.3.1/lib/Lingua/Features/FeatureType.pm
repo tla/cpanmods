@@ -37,6 +37,7 @@ Lingua::Features::FeatureType->_new(  # types
         ind  => 'indefinite',
         poss => 'possessive',
         card => 'cardinal',
+	ord  => 'ordinal',
         int  => 'interrogative',
     }
 );
@@ -58,7 +59,8 @@ Lingua::Features::FeatureType->_new(  # types
         common => 'common',
         proper => 'proper',
         dist   => 'distinguished',
-        ord    => 'ordinal'
+	card   => 'cardinal',  # for numbers
+        ord    => 'ordinal'    # for numbers
     }
 );
 
