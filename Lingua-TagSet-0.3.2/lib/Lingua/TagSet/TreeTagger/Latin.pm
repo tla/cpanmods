@@ -13,15 +13,24 @@ use strict;
 our @id_maps = (
     {
         features => { cat => 'adj', degree => 'comp' },
-        tokens   => [ 'ADJ', 'COM' ],
+        tokens   => [ 'ADJ', 'COM', undef ],
+        submap   => [
+        	2 => 'case'
+        ]
     },
     {
         features => { cat => 'adj', degree => 'sup' },
-        tokens   => [ 'ADJ', 'SUP' ],
+        tokens   => [ 'ADJ', 'SUP', undef ],
+        submap   => [
+        	2 => 'case'
+        ]
     },
     {
         features => { cat => 'adj', type => [ 'ord', 'card' ] },
-        tokens   => [ 'ADJ', 'NUM' ],
+        tokens   => [ 'ADJ', 'NUM', undef ],
+        submap   => [
+        	2 => 'case'
+        ]
     },
     {
         features => { cat => 'adj' },
@@ -41,6 +50,10 @@ our @id_maps = (
     {
         features => { cat => 'conj', type => 'sub' },
         tokens   => [ 'CS' ],
+    },
+    {
+        features => { cat => 'conj' },
+        tokens   => [ 'CC|CS' ],
     },
     {
         features => { cat => 'det' },
@@ -66,13 +79,12 @@ our @id_maps = (
         tokens   => [ 'INT' ],
     },
     {
-        features => { cat => 'noun', type => 'common' },
+        features => { cat => 'noun' },
         tokens   => [ 'N', undef ],
         submap   => [
         	1 => 'case'
         ]
     },
-    # NPR?
     {
         features => { cat => 'noun', type => 'proper' },
         tokens   => [ 'NPR' ],
@@ -114,6 +126,7 @@ our @id_maps = (
 our %value_maps = (
     mode => [ 
     	GER => 'gnd',
+    	GNDV => 'gndv',
         IMP => 'imp',
         IND => 'ind',
         INF => 'inf',
@@ -171,6 +184,9 @@ sub structure2tag {
     } @tokens;
 
     # join tokens in tag
+    while( @tokens && !$tokens[-1] ) {
+    	pop @tokens;
+    }
     my $tag_string = join(':', @tokens);
 
     return $tag_string;

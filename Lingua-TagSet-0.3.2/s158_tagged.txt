@@ -8,7 +8,7 @@ Apostolum	N:acc	apostola|apostolus
 beatum	ADJ	beatus
 audivimus	V:IND	audio
 exhortantem	V:PTC:acc	exhorto
-et	CC	et
+et	CC|CS	et
 confirmantem	V:PTC:acc	confirmo
 nos	PRON	nos
 ,	PUN	,

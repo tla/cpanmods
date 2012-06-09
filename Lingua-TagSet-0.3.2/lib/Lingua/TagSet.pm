@@ -31,6 +31,7 @@ language processing, using Lingua::Features as a pivot format
 use Memoize;
 use Lingua::Features::Structure;
 use Lingua::TagSet::Tag;
+use List::MoreUtils qw/ uniq /;
 use strict;
 use warnings;
 
@@ -317,7 +318,10 @@ sub _select_alternative_maps {
     my ($maps, $functions) = @_;
 
     # return unique solution
-    return $maps->[0] if $#$maps == 0;
+    return $maps->[0] if @$maps == 1;
+    my @unique_maps = uniq( @$maps );
+    return $unique_maps[0] if @unique_maps == 1;
+    $maps = \@unique_maps;
 
     my $function = shift @$functions;
 
