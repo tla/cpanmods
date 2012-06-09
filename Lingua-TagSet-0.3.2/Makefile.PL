@@ -14,6 +14,7 @@ WriteMakefile(
     PREREQ_PM     => {
         'Lingua::Features'            => 0.3,
         'Lingua::Features::Structure' => 0,
+	'List::MoreUtils'             => 0,
         'Memoize'                     => 0,
         'Test::More'                  => 0,
     },
