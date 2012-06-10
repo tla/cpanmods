@@ -25,7 +25,7 @@ Lingua::Features::FeatureType->_new(  # types
         int  => 'interrogative',
         excl => 'exclusive',
         part => 'partitive',
-        card => 'cardinal',
+        card => 'cardinal'  # Talana req
     }
 );
 
@@ -33,13 +33,12 @@ Lingua::Features::FeatureType->_new(  # types
     id     => 'adj',
     values => {
         qual => 'qualitative',
-        ord  => 'ordinal',
         ind  => 'indefinite',
         poss => 'possessive',
-        card => 'cardinal',
-        ord  => 'ordinal',
-        int  => 'interrogative',
         proper => 'proper',
+        int  => 'interrogative',
+        ord  => 'ordinal', # Talana/Multext req
+        card => 'cardinal' # Talana req
     }
 );
 
@@ -60,8 +59,15 @@ Lingua::Features::FeatureType->_new(  # types
         common => 'common',
         proper => 'proper',
         dist   => 'distinguished',
-        card   => 'cardinal',  # for numbers
-        ord    => 'ordinal'    # for numbers
+        ord    => 'ordinal'  # Talana req
+    }
+);
+
+Lingua::Features::FeatureType->_new(  # types
+    id     => 'number',
+    values => {
+		card   => 'cardinal',
+        ord    => 'ordinal'
     }
 );
 
@@ -77,6 +83,8 @@ Lingua::Features::FeatureType->_new(  # types
         cli  => 'clitic',
         refl => 'reflexive',
         rec  => 'reciprocal',
+        prop => 'proper',
+        id   => 'identity',
     }
 );
 

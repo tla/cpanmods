@@ -100,6 +100,16 @@ Lingua::Features::StructureType->_new(
 );
 
 Lingua::Features::StructureType->_new(
+    id       => 'num',
+    desc     => 'number',
+    features => [
+        type   => 'number',
+        gender => 'gender',
+        case   => 'case',
+    ]
+);
+
+Lingua::Features::StructureType->_new(
 	id   => 'part',
 	desc => 'particle',
 	features => [
