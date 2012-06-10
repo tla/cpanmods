@@ -386,14 +386,10 @@ cat@det type@art gender@fem num@sing def@def
 cat@det type@art gender@masc num@sing def@def
 cat@det type@art gender@fem num@sing def@ind
 cat@det type@art gender@masc num@sing def@ind
-cat@adj type@card gender@fem num@pl
-cat@adj type@card gender@masc num@pl
-cat@adj type@card gender@fem num@sing
-cat@adj type@card gender@masc num@sing
-cat@det type@card gender@fem num@pl
-cat@det type@card gender@masc num@pl
-cat@det type@card gender@fem num@sing
-cat@det type@card gender@masc num@sing
+cat@det gender@fem num@pl
+cat@det gender@masc num@pl
+cat@det gender@fem num@sing
+cat@det gender@masc num@sing
 cat@noun type@common gender@fem num@pl
 cat@noun type@common gender@masc num@pl
 cat@noun type@common gender@fem num@sing
@@ -440,14 +436,14 @@ cat@adj type@int gender@fem num@sing
 cat@adj type@int gender@masc num@sing
 cat@det type@int gender@fem num@pl
 cat@det type@int gender@fem num@sing
-cat@adj type@ord gender@fem num@pl
-cat@adj type@ord gender@masc num@pl
-cat@adj type@ord gender@fem num@sing
-cat@adj type@ord gender@masc num@sing
-cat@noun type@ord gender@fem num@pl
-cat@noun type@ord gender@masc num@pl
-cat@noun type@ord gender@fem num@sing
-cat@noun type@ord gender@masc num@sing
+cat@adj gender@fem num@pl
+cat@adj gender@masc num@pl
+cat@adj gender@fem num@sing
+cat@adj gender@masc num@sing
+cat@noun gender@fem num@pl
+cat@noun gender@masc num@pl
+cat@noun gender@fem num@sing
+cat@noun gender@masc num@sing
 cat@det type@part gender@fem num@sing
 cat@det type@part gender@masc num@sing
 cat@adj type@poss gender@fem num@pl
@@ -500,3 +496,8 @@ cat@adj type@qual degree@pos gender@fem num@sing
 cat@adj type@qual degree@pos gender@masc num@sing
 cat@adj type@qual gender@fem num@sing
 cat@adj type@qual gender@masc num@sing
+cat@num
+cat@num type@card gender@fem case@gen
+cat@num type@card gender@masc case@gen
+cat@num type@ord gender@fem case@acc
+cat@num type@ord gender@masc case@acc

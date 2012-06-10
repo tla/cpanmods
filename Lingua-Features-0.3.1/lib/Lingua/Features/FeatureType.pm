@@ -25,7 +25,6 @@ Lingua::Features::FeatureType->_new(  # types
         int  => 'interrogative',
         excl => 'exclusive',
         part => 'partitive',
-        card => 'cardinal',
     }
 );
 
@@ -33,11 +32,8 @@ Lingua::Features::FeatureType->_new(  # types
     id     => 'adj',
     values => {
         qual => 'qualitative',
-        ord  => 'ordinal',
         ind  => 'indefinite',
         poss => 'possessive',
-        card => 'cardinal',
-	ord  => 'ordinal',
         int  => 'interrogative',
     }
 );
@@ -45,11 +41,11 @@ Lingua::Features::FeatureType->_new(  # types
 Lingua::Features::FeatureType->_new(  # types
     id     => 'adv',
     values => {
-        dem => 'demonstrative',
+        dem   => 'demonstrative',
         prop  => 'proper',
-        rel  => 'relative',
+        rel   => 'relative',
         indef => 'indefinite',
-        int  => 'interrogative',
+        int   => 'interrogative',
     }
 );
 
@@ -59,8 +55,14 @@ Lingua::Features::FeatureType->_new(  # types
         common => 'common',
         proper => 'proper',
         dist   => 'distinguished',
-	card   => 'cardinal',  # for numbers
-        ord    => 'ordinal'    # for numbers
+    }
+);
+
+Lingua::Features::FeatureType->_new(  # types
+    id     => 'number',
+    values => {
+		card   => 'cardinal',
+        ord    => 'ordinal'
     }
 );
 
@@ -77,6 +79,7 @@ Lingua::Features::FeatureType->_new(  # types
         refl => 'reflexive',
         rec  => 'reciprocal',
         prop => 'proper',
+        id   => 'identity',
     }
 );
 
