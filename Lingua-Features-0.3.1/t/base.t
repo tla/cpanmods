@@ -26,7 +26,7 @@ ok(
 ok(
     eq_set(
 	[ Lingua::Features::FeatureType->type('noun')->values() ],
-	[ qw/proper dist common/ ]
+	[ qw/ord proper dist common/ ]
     ),
     'values set'
 );

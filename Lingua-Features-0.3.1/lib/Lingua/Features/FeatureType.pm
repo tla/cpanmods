@@ -25,6 +25,7 @@ Lingua::Features::FeatureType->_new(  # types
         int  => 'interrogative',
         excl => 'exclusive',
         part => 'partitive',
+        card => 'cardinal'  # Talana req
     }
 );
 
@@ -35,6 +36,8 @@ Lingua::Features::FeatureType->_new(  # types
         ind  => 'indefinite',
         poss => 'possessive',
         int  => 'interrogative',
+        ord  => 'ordinal', # Talana/Multext req
+        card => 'cardinal' # Talana req
     }
 );
 
@@ -55,6 +58,7 @@ Lingua::Features::FeatureType->_new(  # types
         common => 'common',
         proper => 'proper',
         dist   => 'distinguished',
+        ord    => 'ordinal'  # Talana req
     }
 );
 
