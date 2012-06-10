@@ -37,8 +37,9 @@ Lingua::Features::FeatureType->_new(  # types
         ind  => 'indefinite',
         poss => 'possessive',
         card => 'cardinal',
-	ord  => 'ordinal',
+        ord  => 'ordinal',
         int  => 'interrogative',
+        proper => 'proper',
     }
 );
 
@@ -46,9 +47,9 @@ Lingua::Features::FeatureType->_new(  # types
     id     => 'adv',
     values => {
         dem => 'demonstrative',
-        prop  => 'proper',
+        proper  => 'proper',
         rel  => 'relative',
-        indef => 'indefinite',
+        ind => 'indefinite',
         int  => 'interrogative',
     }
 );
@@ -59,7 +60,7 @@ Lingua::Features::FeatureType->_new(  # types
         common => 'common',
         proper => 'proper',
         dist   => 'distinguished',
-	card   => 'cardinal',  # for numbers
+        card   => 'cardinal',  # for numbers
         ord    => 'ordinal'    # for numbers
     }
 );
@@ -76,7 +77,6 @@ Lingua::Features::FeatureType->_new(  # types
         cli  => 'clitic',
         refl => 'reflexive',
         rec  => 'reciprocal',
-        prop => 'proper',
     }
 );
 
@@ -85,6 +85,7 @@ Lingua::Features::FeatureType->_new(  # types
     values => {
         co   => 'coordinating',
         sub  => 'subordinating',
+        adv  => 'adverbial',
     }
 );
 
