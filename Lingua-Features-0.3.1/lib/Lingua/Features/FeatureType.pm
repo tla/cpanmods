@@ -147,6 +147,7 @@ Lingua::Features::FeatureType->_new(
     values => {
         act  => 'active',
         pass => 'passive',
+        dep  => 'deponent',
     }
 );
 
