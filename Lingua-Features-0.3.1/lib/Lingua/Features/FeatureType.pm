@@ -35,6 +35,7 @@ Lingua::Features::FeatureType->_new(  # types
         qual => 'qualitative',
         ind  => 'indefinite',
         poss => 'possessive',
+        proper => 'proper',
         int  => 'interrogative',
         ord  => 'ordinal', # Talana/Multext req
         card => 'cardinal' # Talana req
@@ -44,11 +45,11 @@ Lingua::Features::FeatureType->_new(  # types
 Lingua::Features::FeatureType->_new(  # types
     id     => 'adv',
     values => {
-        dem   => 'demonstrative',
-        prop  => 'proper',
-        rel   => 'relative',
-        indef => 'indefinite',
-        int   => 'interrogative',
+        dem => 'demonstrative',
+        proper  => 'proper',
+        rel  => 'relative',
+        ind => 'indefinite',
+        int  => 'interrogative',
     }
 );
 
@@ -92,6 +93,7 @@ Lingua::Features::FeatureType->_new(  # types
     values => {
         co   => 'coordinating',
         sub  => 'subordinating',
+        adv  => 'adverbial',
     }
 );
 

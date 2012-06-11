@@ -12,6 +12,10 @@ use strict;
 
 our @id_maps = (
     {
+        features => { cat => 'abr' },
+        tokens   => [ 'ABR' ]
+    },
+    {
         features => { cat => 'adj', degree => 'comp' },
         tokens   => [ 'ADJ', 'COM', undef ],
         submap   => [
@@ -52,8 +56,12 @@ our @id_maps = (
         tokens   => [ 'CS' ],
     },
     {
+        features => { cat => 'conj', type => 'adv' },
+        tokens   => [ 'CA' ],
+    },
+    {
         features => { cat => 'conj' },
-        tokens   => [ 'CC|CS' ],
+        tokens   => [ 'CONJ' ],
     },
     {
         features => { cat => 'det' },
@@ -87,7 +95,10 @@ our @id_maps = (
     },
     {
         features => { cat => 'noun', type => 'proper' },
-        tokens   => [ 'NPR' ],
+        tokens   => [ 'NPR' , undef ],
+        submap   => [
+        	1 => 'case'
+        ]
     },
     {
         features => { cat => [ 'pron', 'adj', 'det' ], type => 'poss' }, #ok
