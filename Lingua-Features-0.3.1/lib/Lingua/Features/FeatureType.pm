@@ -136,6 +136,7 @@ Lingua::Features::FeatureType->_new(
         perf => 'perfect',
         plup => 'pluperfect',
         fp   => 'future perfect',
+        aor  => 'aorist',
     }
 );
 
@@ -181,7 +182,15 @@ Lingua::Features::FeatureType->_new(
         pl   => 'plural',
         sing => 'singular',
     }
-);
+);  # TODO add dual
+
+Lingua::Features::FeatureType->_new(
+    id     => 'refnum',
+    values => {
+        pl   => 'plural',
+        sing => 'singular',
+    }
+);  # for Armenian personal / possessive pronouns
 
 Lingua::Features::FeatureType->_new(
     id     => 'case',
@@ -195,6 +204,7 @@ Lingua::Features::FeatureType->_new(
         loc => 'locative',
         abl => 'ablative',
         voc => 'vocative',
+        inst => 'instrumental',
     }
 );
 

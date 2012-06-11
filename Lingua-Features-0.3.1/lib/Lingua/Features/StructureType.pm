@@ -125,6 +125,7 @@ Lingua::Features::StructureType->_new(
         pers    => 'pers',
         gender  => 'gender',
         num     => 'num',
+        refnum  => 'refnum',
         case    => 'case',
         degree  => 'degree',
         numposs => 'num'
@@ -143,7 +144,10 @@ Lingua::Features::StructureType->_new(
 
 Lingua::Features::StructureType->_new(
     id   => 'prep',
-    desc => 'preposition'
+    desc => 'preposition',
+	features => [
+		case => 'case'
+	]
 );
 
 Lingua::Features::StructureType->_new(
