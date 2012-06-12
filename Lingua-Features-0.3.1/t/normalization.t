@@ -69,7 +69,7 @@ is(
 	    cat    => 'noun',
 	    type   => 'proper',
 	    gender => [ 'masc', 'fem' ],
-	    num    => [  'sing', 'pl' ]
+	    num    => [  'sing', 'pl', 'dual' ]
 	)->to_string(),
         $string2,
         "all type values"

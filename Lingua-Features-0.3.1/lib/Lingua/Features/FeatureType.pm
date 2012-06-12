@@ -101,6 +101,7 @@ Lingua::Features::FeatureType->_new(  # types
     id     => 'part',
     values => {
         mod => 'modal',
+        oth => 'other',  # to provide a default
     }
 );
 
@@ -125,6 +126,7 @@ Lingua::Features::FeatureType->_new(
         gndv => 'gerundive',
         gnd  => 'gerund',
         sup  => 'supine',
+        opt  => 'optative',
     }
 );
 
@@ -146,7 +148,9 @@ Lingua::Features::FeatureType->_new(
     id     => 'voice',
     values => {
         act  => 'active',
+        mid  => 'middle',
         pass => 'passive',
+        mp   => 'middle/passive',
         dep  => 'deponent',
     }
 );
@@ -184,6 +188,7 @@ Lingua::Features::FeatureType->_new(
     values => {
         pl   => 'plural',
         sing => 'singular',
+        dual => 'dual'
     }
 );  # TODO add dual
 

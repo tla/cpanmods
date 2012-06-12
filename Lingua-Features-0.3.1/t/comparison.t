@@ -32,7 +32,7 @@ ok(
 
 is(
     Lingua::Features::Structure->union($struc1, $struc3)->to_string(),
-    'cat@noun type@proper gender@fem|masc',
+    'cat@noun type@proper gender@fem|masc num@pl|sing',
     'union'
 );
 
@@ -44,7 +44,7 @@ is(
 
 is(
     Lingua::Features::Structure->union($struc1, $struc4)->to_string(),
-    'cat@noun type@common|proper gender@fem|masc',
+    'cat@noun type@common|proper gender@fem|masc num@pl|sing',
     'union'
 );
 
