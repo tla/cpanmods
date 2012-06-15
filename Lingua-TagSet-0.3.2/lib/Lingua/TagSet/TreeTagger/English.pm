@@ -95,7 +95,7 @@ our @id_maps = (
     
     # Numbers
     {
-        features => { cat => [ 'noun', 'adj', 'det' ] },
+        features => { cat => 'num', type => 'card' },
         tokens   => [ 'CD' ],
     },
     
