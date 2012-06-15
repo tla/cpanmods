@@ -101,6 +101,10 @@ our @id_maps = (
         ]
     },
     {
+        features => { cat => 'part' }, #OK
+        tokens   => [ 'PART' ],
+    },
+    {
         features => { cat => [ 'pron', 'adj', 'det' ], type => 'poss' }, #ok
         tokens   => [ 'POSS' ],
     },
