@@ -4,6 +4,8 @@ use Moose;
 use Carp;
 
 use Catalyst::Authentication::Store::Model::KiokuDB::UserWrapper;
+use KiokuX::User;
+use KiokuX::User::Util qw(crypt_password);
 
 use namespace::clean -except => 'meta';
 
@@ -56,6 +58,36 @@ sub from_session {
     my $user = $self->get_model($c)->lookup($id);
 
     $self->wrap($c, $user);
+}
+
+sub auto_create_user {
+    my ($self, $authinfo, $c) = @_;
+
+    $c->log->debug("Calling auto_create_user");
+
+    my $model = $self->get_model($c);
+    my $user = $model->can('create_user') 
+        ? $model->create_user($authinfo)
+        : $self->create_user($authinfo, $model);
+
+    if ( $user ) {
+        return $self->wrap($c, $user);
+    } else {
+        return;
+    }
+}
+
+sub create_user {
+    my ($self, $authinfo, $model) = @_;
+
+    my $user = KiokuX::User->new(
+        id => $authinfo->{username},
+        password => crypt_password($authinfo->{password}),
+    );
+    my $id = $user->kiokudb_object_id;
+    $model->store($id, $user);
+
+    return $user;
 }
 
 sub find_user {
