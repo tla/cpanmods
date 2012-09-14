@@ -14,6 +14,9 @@ use warnings;
 use 5.008_001;
 use utf8;
 
+use vars qw/ $VERSION /;
+$VERSION = '3.1';
+
 use Flemm::Brill;
 use Flemm::TreeTagger;
 
