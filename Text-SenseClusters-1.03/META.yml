@@ -1,0 +1,29 @@
+--- #YAML:1.0
+name:               Text-SenseClusters
+version:            1.03
+abstract:           SenseClusters - Clustering similar written contexts
+author:
+    - Ted Pedersen <tpederse at d.umn.edu>
+license:            gpl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Algorithm::Munkres:   0.07
+    Algorithm::RandomMatrixGeneration:  0.06
+    Bit::Vector:          6.3
+    Math::SparseMatrix:   0.02
+    Math::SparseVector:   0.04
+    PDL:                  2.006
+    Set::Scalar:          1.19
+    Text::NSP:            1.09
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.57_05
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
